@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mac-local-training"
+version = "0.1.0"
+description = "Local MLX adapter-window experiments with disk-backed optimizer state"
+requires-python = ">=3.10"
+dependencies = ["mlx==0.32.3", "mlx-lm[train]==0.32.0", "psutil==7.2.2"]
+license = "MIT"
+
+[project.scripts]
+mac-local-training = "mac_local_training.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["mac_local_training*"]

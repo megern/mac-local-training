@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "summary_collected_at_utc": "2026-10-06T22:03:17.275085+00:00",
+  "hardware": {
+    "chip": "Apple M1",
+    "unified_memory_gb": 16
+  },
+  "execution": "Local Metal GPU, separate fresh processes; no remote compute.",
+  "dataset": {
+    "train": "examples/train.jsonl",
+    "valid": "examples/valid.jsonl",
+    "scope": "Synthetic bilingual templates with template overlap across splits."
+  },
+  "runs": {
+    "all": {
+      "mode": "random_tiny_software_check",
+      "strategy": "all",
+      "steps": 40,
+      "microbatches": 80,
+      "tokens": 7718,
+      "training_seconds": 1.2860845860559493,
+      "tokens_per_second": 6001.160486394508,
+      "end_to_end_seconds_this_process_segment": 1.400936207966879,
+      "tokens_per_second_including_io_and_validation_this_process_segment": 5509.173048786293,
+      "heldout_nll_before": 5.932984420801926,
+      "heldout_nll_after": 4.891327057651539,
+      "heldout_nll_change": -1.041657363150387,
+      "layer_update_coverage": [
+        40,
+        40,
+        40,
+        40
+      ],
+      "peak_optimizer_resident_bytes": 14348,
+      "mlx_peak_bytes_this_process_segment": 7533200,
+      "process_rss_high_water_bytes": 105185280,
+      "mlx_memory_budget_bytes": 6442450944,
+      "train_token_windows": 48,
+      "valid_token_windows": 12,
+      "local_report_sha256": "72d97a38b31398839a3cceaa65da398f952e01cc323560dde2fc63c56f9ecb25",
+      "config": {
+        "tiny_model": true,
+        "strategy": "all",
+        "microbatch_size": 1,
+        "accumulation_steps": 2,
+        "window_layers": 1,
+        "window_updates": 1,
+        "learning_rate": 0.001,
+        "rank": 4,
+        "lora_scale": 1.0,
+        "seed": 17,
+        "max_seq_length": 128,
+        "memory_budget_gib": 6
+      },
+      "train_sha256": "ce05ad9142a60dc53d57a4559aa05c71d99760adc0ec0662bf7eab36ec0dce15",
+      "valid_sha256": "8e101959a766623e92cd804c9827bfa9265aac55f43a1dac90b3b8e463c5fcad",
+      "model": {
+        "tiny_qwen2": "4_layers_32_hidden_64_intermediate_259_vocab_v1"
+      },
+      "versions": {
+        "mlx": "0.32.3",
+        "mlx-lm": "0.32.0"
+      }
+    },
+    "rotating": {
+      "mode": "random_tiny_software_check",
+      "strategy": "rotating",
+      "steps": 40,
+      "microbatches": 80,
+      "tokens": 7718,
+      "training_seconds": 0.477612626273185,
+      "tokens_per_second": 16159.539290708482,
+      "end_to_end_seconds_this_process_segment": 1.2700755828991532,
+      "tokens_per_second_including_io_and_validation_this_process_segment": 6076.80369886524,
+      "heldout_nll_before": 5.932984420801926,
+      "heldout_nll_after": 5.487116802477557,
+      "heldout_nll_change": -0.4458676183243693,
+      "layer_update_coverage": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "peak_optimizer_resident_bytes": 3596,
+      "mlx_peak_bytes_this_process_segment": 5830279,
+      "process_rss_high_water_bytes": 110051328,
+      "mlx_memory_budget_bytes": 6442450944,
+      "train_token_windows": 48,
+      "valid_token_windows": 12,
+      "local_report_sha256": "2df480705a5a5335dd0c0900a81adeb6b4838a981858e5bf5aad80f73a3c7843",
+      "config": {
+        "tiny_model": true,
+        "strategy": "rotating",
+        "microbatch_size": 1,
+        "accumulation_steps": 2,
+        "window_layers": 1,
+        "window_updates": 1,
+        "learning_rate": 0.001,
+        "rank": 4,
+        "lora_scale": 1.0,
+        "seed": 17,
+        "max_seq_length": 128,
+        "memory_budget_gib": 6
+      },
+      "train_sha256": "ce05ad9142a60dc53d57a4559aa05c71d99760adc0ec0662bf7eab36ec0dce15",
+      "valid_sha256": "8e101959a766623e92cd804c9827bfa9265aac55f43a1dac90b3b8e463c5fcad",
+      "model": {
+        "tiny_qwen2": "4_layers_32_hidden_64_intermediate_259_vocab_v1"
+      },
+      "versions": {
+        "mlx": "0.32.3",
+        "mlx-lm": "0.32.0"
+      }
+    }
+  },
+  "comparison": {
+    "optimizer_resident_reduction_fraction": 0.7493727348759409,
+    "mlx_peak_reduction_fraction": 0.22605546115860453,
+    "rss_change_fraction": 0.046261682242990654
+  },
+  "limitations": [
+    "One seed and one short run per strategy on a randomly initialized tiny model.",
+    "Rotating gives each layer 10 updates; all gives each layer 40 updates.",
+    "Training-only throughput excludes checkpoint I/O and validation; end-to-end includes both.",
+    "RSS increased in the rotating run despite lower optimizer state and MLX peak.",
+    "This is a software check, not a cybersecurity task accuracy or useful model quality result.",
+    "Full base weights remain resident; these measurements do not establish that a large model fits.",
+    "Local paths and raw checkpoint contents are omitted from the public summary."
+  ]
+}
