@@ -142,3 +142,18 @@ Planning and `doctor` install without MLX. `doctor` discovers platform/modules w
 `results/tiny-residency-20261011/` contains six fresh-process runs with fixed seeds 11/29/47, 16 updates and matched synthetic data. Resident optimizer bytes are 14,348 for all-adapter updates and 3,596 for rotating updates for every seed. These are optimizer-state bytes, not total process memory. Rotating layers receive fewer updates; the NLL changes differ as expected, so this is not an equal-optimization or useful-model-quality comparison. Sources and protocol were frozen before execution. Weights/checkpoints remain local. See the per-run report for MLX allocations, RSS, token coverage and timing definitions.
 
 Recreate the diagnostic figure with `python3 -m pip install '.[plots]'` and `python3 plot_tiny_study.py`. Plotting reads the published JSON and performs no training.
+
+### Local experimental single-pass grouped Adam
+
+`train-offloaded` uses the same arguments as `train-synchronous` (rotating layout,
+window updates 1). It computes all adapter gradients against the same pre-update
+weights once per microbatch, then updates groups with disk-backed inactive Adam
+moments. The complete gradient tree remains in memory; reports explicitly record
+`full_gradient_resident_bytes`. This exchanges gradient residency for avoiding
+repeated backwards. It does not offload the frozen base model.
+
+Checkpoint identity differs from ordinary rotating and recomputing synchronous
+training. After a failed partial update, discard the object and resume the last
+committed checkpoint. Tiny tests cover masked accumulation, frozen base weights,
+reference equivalence, resume and incompatible checkpoint rejection. Original
+BF16 validation is local and has not established speed gains or novelty.
