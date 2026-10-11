@@ -1,0 +1,17 @@
+{
+  "status": "execution deviation; hardware command-buffer failure preserved",
+  "event": {
+    "run_id": "rank-4-seed-23-all",
+    "stage": "measured update loop; no complete result or elapsed measurement was saved",
+    "error": "[METAL] Command buffer execution failed: Impacting Interactivity (0000000e:kIOGPUCommandBufferCallbackErrorImpactingInteractivity).",
+    "archived_attempt": "failures/rank-4-seed-23-all-attempt-1",
+    "saved_utc": "2026-10-11T21:34:06Z",
+    "failure_elapsed_seconds": null
+  },
+  "recovery_rule": "From this point, at most one fresh-process retry for any runtime/device failure, with the exact same frozen configuration. Preserve every failure. Abort on a repeated failure. Do not retry unfavorable numerical/performance results.",
+  "protocol_change": "No source, data, method order, seed, rank, acceptance threshold or statistical rule changed. Recovery policy is an explicit post-start execution addendum.",
+  "inference_limit": "The report describes completed-run comparisons conditional on success. One failed baseline attempt is preserved separately; its duration was not captured, so total retry-inclusive job cost cannot be computed.",
+  "related_primary_issue": "https://github.com/ml-explore/mlx/issues/3267",
+  "interpretation": "This signature is also reported upstream during active-display training. That report does not prove the exact cause of this local failure. No driver timeout override or display/system setting was changed.",
+  "stage_correction": "Initial recovery note labeled this as warmup. Inspection of the captured traceback shows worker line 189, inside the measured loop. Corrected without changing experiment data."
+}

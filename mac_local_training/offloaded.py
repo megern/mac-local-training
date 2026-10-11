@@ -6,6 +6,9 @@ from .engine import _json_write, _rss_bytes
 
 
 class OffloadedTrainingEngine(SynchronousTrainingEngine):
+    def update_group_order(self):
+        return list(range(len(self.groups)))
+
     def _identity(self):
         identity = super()._identity()
         identity['schedule'] = 'single-pass-grouped-adam-v1'
@@ -43,7 +46,7 @@ class OffloadedTrainingEngine(SynchronousTrainingEngine):
         peak_resident = 0
         # Force activation even if the last group is already active: the forward
         # above unfroze every adapter, so its trainable tree must be restricted.
-        for group_id in range(len(self.groups)):
+        for group_id in self.update_group_order():
             if self.active_group == group_id:
                 self.model.freeze()
                 for layer_id in self.groups[group_id]:

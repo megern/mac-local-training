@@ -157,3 +157,68 @@ training. After a failed partial update, discard the object and resume the last
 committed checkpoint. Tiny tests cover masked accumulation, frozen base weights,
 reference equivalence, resume and incompatible checkpoint rejection. Original
 BF16 validation is local and has not established speed gains or novelty.
+
+### Controlled original-weight studies (local review branch)
+
+This branch adds `train-endpoint` and `train-normalized`; both use the same
+local arguments and rotating group layout as `train-offloaded`. All adapters
+receive one update per logical step from the same pre-update gradients.
+
+- `train-endpoint` alternates group order so the next step starts with the
+  retained group. This scheduling idea is explicitly prior art in
+  [MLP-Offload](https://arxiv.org/html/2509.02480v1), not an invention here.
+- `train-normalized` retains raw accumulated gradients, divides only the current
+  group by the total supervised-target count, and releases consumed raw values.
+  It avoids a second complete normalized tree. This is a buffer-lifetime
+  implementation experiment; overall memory savings must be measured.
+
+Read the [bounded scheduling proof](docs/endpoint-proof.md),
+[normalization argument](docs/normalization-proof.md),
+[related-work review](docs/endpoint-prior-art.md) and
+[reproduction guide](docs/endpoint-reproduction.md). The guide reconstructs exact
+SMS token rows from local public inputs; no raw texts or weights are distributed.
+
+Each study fixes 36 fresh-process runs before execution: six seeds, ranks 4/256,
+three methods, all six method-order permutations, two warmups and four measured
+updates. The external update timer includes state swapping for every method.
+Final adapter arrays, Adam moments/counters, target counts and layer coverage
+are compared with full Adam. Numerical agreement, operation savings, total
+allocation and elapsed time are separate acceptance gates. Failed performance
+gates and hardware failures are retained. These short mechanical checks do not
+establish task quality, practical 70B fit or production readiness.
+
+
+The two completed studies contain 72 audited runs. All numerical-equivalence
+checks passed, but neither primary performance gate passed. See the
+[research note](papers/optimizer-lifetime-study.md) and complete aggregate
+[endpoint](results/endpoint-study-v2/analysis.json) and
+[normalization](results/normalization-study-v1/analysis.json) evidence. These
+local-review results retain every completed run and recorded device failure.
+
+A [post-hoc root-lifetime diagnostic](results/gradient-root-phase-pilot-v1/README.md)
+found lower active allocation after accumulation but unchanged global peak;
+this is not a demonstrated peak-memory improvement.
+
+A third [deferred-recomputation study](docs/recomputation-reproduction.md)
+uses six new seeds and disjoint mechanical-validation selections. Its protocol
+requires all 36 runs and a complete state audit before any positive decision.
+It explicitly tests a memory/time tradeoff of established recomputation,
+without claiming a new optimizer. The execution supervisor preserves every
+attempt and allows only one retry for the exact documented Metal error.
+
+`studies/prepare_replication.py` creates a new local protocol from a sanitized
+exported design and exact reconstructed data, checking executed-source/model/
+data hashes. Original execution and local replication protocols have different
+hashes and remain distinguishable. No datasets or weights are distributed.
+
+
+The third confirmation is complete: **36/36 audited runs**, plus the earlier
+72, for **108 completed runs** in the research note. Its primary rank-256
+condition lowers MLX allocator peak by **7.11%** versus endpoint retention
+(95% paired ratio interval 0.92847–0.92917), while measured-loop time rises to
+**2.35×** (interval 1.97–2.88×). All adapter/Adam tensor and completion-NLL errors
+were zero in these tested configurations. Rank 4 saves only 0.81% and fails the
+3% memory gate. These are single-model, shared-machine measurements; no new
+algorithm, physical-RAM percentage or quality improvement is established.
+See [complete third-study evidence](results/recomputation-study-v1/analysis.json)
+and [execution accounting](results/recomputation-study-v1/execution-audit.json).

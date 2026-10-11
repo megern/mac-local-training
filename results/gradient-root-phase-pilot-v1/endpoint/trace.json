@@ -1,0 +1,71 @@
+{
+  "status": "post-hoc diagnostic; not used for confirmation gates",
+  "method": "endpoint",
+  "seed": 17,
+  "rank": 256,
+  "profiled_update": 3,
+  "events": [
+    {
+      "phase": "start",
+      "active_bytes": 1412300828,
+      "cumulative_peak_bytes": 0,
+      "observed_gradient_tree_buffer_bytes": null
+    },
+    {
+      "phase": "accumulation",
+      "active_bytes": 1559102552,
+      "cumulative_peak_bytes": 1830707708,
+      "observed_gradient_tree_buffer_bytes": 146800640
+    },
+    {
+      "phase": "accumulation",
+      "active_bytes": 1705903192,
+      "cumulative_peak_bytes": 1894636028,
+      "observed_gradient_tree_buffer_bytes": 146800640
+    },
+    {
+      "phase": "full_normalization",
+      "active_bytes": 1705902356,
+      "cumulative_peak_bytes": 1894636028,
+      "observed_gradient_tree_buffer_bytes": 293601280
+    },
+    {
+      "phase": "optimizer_application",
+      "active_bytes": 1559101468,
+      "cumulative_peak_bytes": 1894636028,
+      "observed_gradient_tree_buffer_bytes": null
+    },
+    {
+      "phase": "optimizer_application",
+      "active_bytes": 1559101468,
+      "cumulative_peak_bytes": 1894636028,
+      "observed_gradient_tree_buffer_bytes": null
+    },
+    {
+      "phase": "optimizer_application",
+      "active_bytes": 1559101468,
+      "cumulative_peak_bytes": 1894636028,
+      "observed_gradient_tree_buffer_bytes": null
+    },
+    {
+      "phase": "optimizer_application",
+      "active_bytes": 1559101468,
+      "cumulative_peak_bytes": 1894636028,
+      "observed_gradient_tree_buffer_bytes": null
+    },
+    {
+      "phase": "end",
+      "active_bytes": 1412300828,
+      "cumulative_peak_bytes": 1894636028,
+      "observed_gradient_tree_buffer_bytes": null
+    }
+  ],
+  "original_source_sha256": "87e6db0338843331b8aed41188c9cb9df7b76e9885feeaaf886fe17d7a99c646",
+  "instrumented_source_sha256": "bccb0ac651a46b4a0f12db968c9edee40e22836366cb87bc5b946468cd1831b3",
+  "source_protocol_sha256": "253fa8370cb79627b2940d22f1814207815eea773f0d72444c26f22fe5b3521e",
+  "limitations": [
+    "Two warmups and one instrumented update on one seed; no speed comparison.",
+    "Phase observations are cumulative high-water readings at these boundaries, not a complete allocator timeline.",
+    "Array buffer sizes exclude graph objects, caches and non-buffer memory."
+  ]
+}

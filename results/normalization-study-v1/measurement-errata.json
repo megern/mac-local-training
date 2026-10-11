@@ -1,0 +1,6 @@
+{
+  "status": "methodology clarification; frozen sources and numbers unchanged",
+  "thermal_state": "Protocol limitation wording said observed thermal state. Workers actually recorded available memory, swap, process RSS and load average, not temperatures or thermal status. Thermal state was neither controlled nor logged.",
+  "confidence_intervals": "Six sequential paired seed blocks on one shared machine; bootstrap intervals are descriptive conditional on these blocks and do not establish cross-machine performance.",
+  "timing_scope": "External synchronized four-update loop includes state I/O, but excludes model/data loading, warmup, validation and checkpoint writes. No end-to-end job-time or energy claim."
+}

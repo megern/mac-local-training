@@ -1,0 +1,8 @@
+{
+  "status": "direct prior art found; endpoint retention is replication",
+  "primary_source": "https://arxiv.org/html/2509.02480v1",
+  "section": "3.2 Cache-Friendly Ordering of Model Subgroup Processing",
+  "finding": "Ascending/descending alternation and per-subgroup update commutativity are explicitly described.",
+  "implication": "Do not claim endpoint retention as novel. Finish frozen comparisons without changing acceptance; use it as the strongest offload baseline for the normalization extension.",
+  "review_document": "outputs/mac-local-training/docs/endpoint-prior-art.md"
+}

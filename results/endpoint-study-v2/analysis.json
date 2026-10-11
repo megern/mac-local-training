@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "protocol_sha256": "66b1cfec6a9aa5324cbcd7a15e441eb2d53fac4039dc834ff850f8f455a0c7b6",
+  "runs_audited": 36,
+  "all_numerical_equivalence_gates_passed": true,
+  "state_switch_reduction_fraction": 0.25,
+  "primary_joint_gate_passed": false,
+  "comparisons": [
+    {
+      "rank": 4,
+      "paired_seed_blocks": [
+        {
+          "seed": 17,
+          "equivalence": {
+            "fixed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_endpoint_over_fixed": 1.2799506568449945,
+          "peak_endpoint_over_fixed": 1.0,
+          "logical_read_fraction": 0.7500010840517344,
+          "logical_write_fraction": 0.7500011924569079,
+          "elapsed_fixed_over_all": 0.5873358860300039,
+          "elapsed_endpoint_over_all": 0.7517609531127403,
+          "peak_fixed_over_all": 0.9926793197683261,
+          "peak_endpoint_over_all": 0.9926793197683261
+        },
+        {
+          "seed": 23,
+          "equivalence": {
+            "fixed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_endpoint_over_fixed": 0.867976691259055,
+          "peak_endpoint_over_fixed": 1.00005096272862,
+          "logical_read_fraction": 0.7500010840517344,
+          "logical_write_fraction": 0.7500011924569079,
+          "elapsed_fixed_over_all": 1.494288814610545,
+          "elapsed_endpoint_over_all": 1.2970078610910765,
+          "peak_fixed_over_all": 0.9891376348938654,
+          "peak_endpoint_over_all": 0.9891880440467202
+        },
+        {
+          "seed": 41,
+          "equivalence": {
+            "fixed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_endpoint_over_fixed": 0.8789728983935349,
+          "peak_endpoint_over_fixed": 0.9999993634936355,
+          "logical_read_fraction": 0.7500010840517344,
+          "logical_write_fraction": 0.7500011924569079,
+          "elapsed_fixed_over_all": 1.371772254391339,
+          "elapsed_endpoint_over_all": 1.2057506343781887,
+          "peak_fixed_over_all": 0.9934288430987918,
+          "peak_endpoint_over_all": 0.9934282107750104
+        },
+        {
+          "seed": 59,
+          "equivalence": {
+            "fixed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_endpoint_over_fixed": 0.70051975816755,
+          "peak_endpoint_over_fixed": 1.0000611260731451,
+          "logical_read_fraction": 0.7500010840517344,
+          "logical_write_fraction": 0.7500011924569079,
+          "elapsed_fixed_over_all": 1.3708845037138144,
+          "elapsed_endpoint_over_all": 0.960331681017243,
+          "peak_fixed_over_all": 0.9930938077767429,
+          "peak_endpoint_over_all": 0.9931545117014772
+        },
+        {
+          "seed": 73,
+          "equivalence": {
+            "fixed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_endpoint_over_fixed": 0.9863891645570373,
+          "peak_endpoint_over_fixed": 1.0000013144024986,
+          "logical_read_fraction": 0.7500010840517344,
+          "logical_write_fraction": 0.7500011924569079,
+          "elapsed_fixed_over_all": 1.3751113897842497,
+          "elapsed_endpoint_over_all": 1.3563949749421527,
+          "peak_fixed_over_all": 0.9882859872311762,
+          "peak_endpoint_over_all": 0.9882872862367472
+        },
+        {
+          "seed": 89,
+          "equivalence": {
+            "fixed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_endpoint_over_fixed": 0.7481574038948954,
+          "peak_endpoint_over_fixed": 0.9999798602239752,
+          "logical_read_fraction": 0.7500010840517344,
+          "logical_write_fraction": 0.7500011924569079,
+          "elapsed_fixed_over_all": 0.9193969214533674,
+          "elapsed_endpoint_over_all": 0.6878536139035104,
+          "peak_fixed_over_all": 0.9884898238097503,
+          "peak_endpoint_over_all": 0.988469915846096
+        }
+      ],
+      "elapsed": {
+        "geometric_mean_ratio": 0.89232502433762,
+        "paired_bootstrap_95_ci": [
+          0.7706994462747361,
+          1.0531896101804818
+        ],
+        "ratios": [
+          1.2799506568449945,
+          0.867976691259055,
+          0.8789728983935349,
+          0.70051975816755,
+          0.9863891645570373,
+          0.7481574038948954
+        ]
+      },
+      "sign_test": {
+        "below_one": 5,
+        "above_one": 1,
+        "ties": 0,
+        "exact_two_sided_p": 0.21875
+      },
+      "speed_gate_passed": false,
+      "memory_nonincrease_gate_passed": true
+    },
+    {
+      "rank": 256,
+      "paired_seed_blocks": [
+        {
+          "seed": 17,
+          "equivalence": {
+            "fixed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_endpoint_over_fixed": 1.2473685517706794,
+          "peak_endpoint_over_fixed": 1.001776237497683,
+          "logical_read_fraction": 0.7500000136227086,
+          "logical_write_fraction": 0.7500000153255472,
+          "elapsed_fixed_over_all": 0.6833949545259146,
+          "elapsed_endpoint_over_all": 0.8524453747143794,
+          "peak_fixed_over_all": 0.8964169451245523,
+          "peak_endpoint_over_all": 0.8980091945160411
+        },
+        {
+          "seed": 23,
+          "equivalence": {
+            "fixed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_endpoint_over_fixed": 0.5901503561344579,
+          "peak_endpoint_over_fixed": 1.0,
+          "logical_read_fraction": 0.7500000136227086,
+          "logical_write_fraction": 0.7500000153255472,
+          "elapsed_fixed_over_all": 2.314733341895563,
+          "elapsed_endpoint_over_all": 1.3660407060759703,
+          "peak_fixed_over_all": 0.8973936381668748,
+          "peak_endpoint_over_all": 0.8973936381668748
+        },
+        {
+          "seed": 41,
+          "equivalence": {
+            "fixed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_endpoint_over_fixed": 0.9837250004329464,
+          "peak_endpoint_over_fixed": 1.0019028210776317,
+          "logical_read_fraction": 0.7500000136227086,
+          "logical_write_fraction": 0.7500000153255472,
+          "elapsed_fixed_over_all": 1.643593836308512,
+          "elapsed_endpoint_over_all": 1.6168443473341791,
+          "peak_fixed_over_all": 0.8947637152412747,
+          "peak_endpoint_over_all": 0.896466290498136
+        },
+        {
+          "seed": 59,
+          "equivalence": {
+            "fixed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_endpoint_over_fixed": 0.9291417208553484,
+          "peak_endpoint_over_fixed": 1.0,
+          "logical_read_fraction": 0.7500000136227086,
+          "logical_write_fraction": 0.7500000153255472,
+          "elapsed_fixed_over_all": 1.4403672048027416,
+          "elapsed_endpoint_over_all": 1.3383052633340273,
+          "peak_fixed_over_all": 0.8977380859885183,
+          "peak_endpoint_over_all": 0.8977380859885183
+        },
+        {
+          "seed": 73,
+          "equivalence": {
+            "fixed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_endpoint_over_fixed": 0.8858019983098272,
+          "peak_endpoint_over_fixed": 1.0,
+          "logical_read_fraction": 0.7500000136227086,
+          "logical_write_fraction": 0.7500000153255472,
+          "elapsed_fixed_over_all": 1.5923909461417292,
+          "elapsed_endpoint_over_all": 1.4105430821828202,
+          "peak_fixed_over_all": 0.8817768450593485,
+          "peak_endpoint_over_all": 0.8817768450593485
+        },
+        {
+          "seed": 89,
+          "equivalence": {
+            "fixed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_endpoint_over_fixed": 0.9096683746430221,
+          "peak_endpoint_over_fixed": 1.0,
+          "logical_read_fraction": 0.7500000136227086,
+          "logical_write_fraction": 0.7500000153255472,
+          "elapsed_fixed_over_all": 1.7228749857944707,
+          "elapsed_endpoint_over_all": 1.5672448880407759,
+          "peak_fixed_over_all": 0.8944969079530412,
+          "peak_endpoint_over_all": 0.8944969079530412
+        }
+      ],
+      "elapsed": {
+        "geometric_mean_ratio": 0.9030022124663465,
+        "paired_bootstrap_95_ci": [
+          0.7416461121501723,
+          1.0680235402288099
+        ],
+        "ratios": [
+          1.2473685517706794,
+          0.5901503561344579,
+          0.9837250004329464,
+          0.9291417208553484,
+          0.8858019983098272,
+          0.9096683746430221
+        ]
+      },
+      "sign_test": {
+        "below_one": 5,
+        "above_one": 1,
+        "ties": 0,
+        "exact_two_sided_p": 0.21875
+      },
+      "speed_gate_passed": false,
+      "memory_nonincrease_gate_passed": true
+    }
+  ],
+  "limitations": [
+    "Single machine and single model; six seeds are not six machines.",
+    "Rank 256 intentionally stresses optimizer state and is not a typical small-rank LoRA workload.",
+    "Logical file bytes are not physical SSD traffic; OS page cache remains active.",
+    "Existing training/validation data are reused for numerical equivalence, not independent task-quality claims.",
+    "Shared-machine background and thermal state are observed, not controlled."
+  ],
+  "novelty_status": "A systems scheduling hypothesis within known optimizer offloading; algorithm priority not established.",
+  "source_result_sha256": {
+    "rank-4-seed-17-all": "03f0fa41a07221aebf57e0fdc8f5e6a754be7421d082e8aa26bc4406dc685118",
+    "rank-4-seed-17-fixed": "150629242c08f4546301a7ef3c2a1819fb2acf650d6fc9fe2206cda8da191417",
+    "rank-4-seed-17-endpoint": "96e33cc5a6640fb85883fea4abdad8c8dfa0e5e0a5bc7d7097254a20fdd7c645",
+    "rank-256-seed-17-all": "8a8cb930fe012baf85f1669147e7049370ad1adaf615d3569b82d5b0670ef101",
+    "rank-256-seed-17-fixed": "fb93ae65eed677b9fec39af00a0240f26f95d49527d3641ea4b15100d2b458a8",
+    "rank-256-seed-17-endpoint": "23b24febafa9307a7feee5b23674259773c798610cc16bd21b7455eafc95f308",
+    "rank-256-seed-23-all": "afa301e74c7945b2e1fabd51ebbe20714db1d462c76b5d741a5f1ba5c5f6e19f",
+    "rank-256-seed-23-endpoint": "781d4c5f0e84fa6510528d3f91f9a0718010d80ff965741bc842ae08a32b5ee7",
+    "rank-256-seed-23-fixed": "f3d55e6c952db8471c4a51c6d06ff5df09ec3e5377f74e4eab2d38da7f58e76a",
+    "rank-4-seed-23-all": "fc321bc98557d75d18c91b42558afc70d127987383386fc70e8ac1f2553bf095",
+    "rank-4-seed-23-endpoint": "14ee525d47f06d464dc88e5102ce4340455abe7ccadc2b789760b9c095e3b2d1",
+    "rank-4-seed-23-fixed": "95e7981517d66fef39b12eabd067321f605e28559d63f5f0628070f763eeb467",
+    "rank-4-seed-41-fixed": "344c6b367653f3cd3941994335afcd04811bdef0cff3ff1f99605f6c0bc668cd",
+    "rank-4-seed-41-all": "954ecb632e54cb39390ff8784a25bd86a02db2483696707c41f1a5113de044f4",
+    "rank-4-seed-41-endpoint": "3459033aceba740506ede6d7a3d6c03527b808f38930bf813721af8e62f47570",
+    "rank-256-seed-41-fixed": "db666c9d6a7958613e00ca55ffe5b47b24dea84d694a8a16c8c94f1c79f76a71",
+    "rank-256-seed-41-all": "94238f932e54983a58586946cb049f98046c5a725eafa06ef0e0eaad16058d2b",
+    "rank-256-seed-41-endpoint": "73e4371dd8dbc7c4afa52fb6bc422cfb82154755b29269bae222a98de7aeee92",
+    "rank-256-seed-59-fixed": "cfe3f50ba4056ba078ebe3e05bf83aac03f111614fc1fa4e0fbcebde45e68157",
+    "rank-256-seed-59-endpoint": "98efa50d24f63862ffa18619f17a2bb02268be7dd1498f08330ca92b6c71edc0",
+    "rank-256-seed-59-all": "1ca8b069bf0a417d3a410b00f295a3ea0fc83bf59c3879acd116f17fb195ea64",
+    "rank-4-seed-59-fixed": "1012cbd9c1eb1c48f2640d524f244de9558b35b5aeac97011e826766e4aa92e8",
+    "rank-4-seed-59-endpoint": "cc015fd26aac0da40abfb8b19d468f5c39adb7f30e558559df4a38e12f3f0700",
+    "rank-4-seed-59-all": "ed2ee485faab53d7aad4c321d12b8fe9416589b2e2ec015ccd1337172f6012dc",
+    "rank-4-seed-73-endpoint": "ad2ec003c733ffdffa505a52f09911e7f174515ea94a015dde3591d7e03fffec",
+    "rank-4-seed-73-all": "3d8f4fe75fbc59ca0ada513e199d71a857571233f812da6fd980d099f637e36b",
+    "rank-4-seed-73-fixed": "40f8709eda209db10b613c9323ee6605a9f4783f13b19f50b87fe26af3c7308a",
+    "rank-256-seed-73-endpoint": "5856e698a3e038307506225f06d578e9188e1a847e8d49f30a0597648e305f7f",
+    "rank-256-seed-73-all": "de4ac341557558cef59980282bdb6caec237fd33e23baccdb871f3a308804d96",
+    "rank-256-seed-73-fixed": "ab30f353b9220f639e1bb331c8f86cd7309a47284a42f2917dbf2941aa437b39",
+    "rank-256-seed-89-endpoint": "99f9df8d003ff7cffabda596e733ffa67b989e4eb407e4df4a83abe8bd47cd21",
+    "rank-256-seed-89-fixed": "216d1b425a73e51ebd77c6b6c364ca0b789e328e55fbd17a19709a6687b88671",
+    "rank-256-seed-89-all": "6b552f4d9ec6f8c8458bcd3b504c7ee7f1d2cb2f24e6f052a2ff60fafaa99639",
+    "rank-4-seed-89-endpoint": "90e09358c859e9c3dd934bd0dd749265e5a3b0d460fc9df5eb0dafa367ce7f13",
+    "rank-4-seed-89-fixed": "90cdb3f2134d5715e5e803c14e1606c8922add749626186b8a5cde7998045b22",
+    "rank-4-seed-89-all": "c2e63927fe1dcd78cf31598b4264a2a5c21d55e08d79e93d6c1c18a5f6c4a089"
+  }
+}

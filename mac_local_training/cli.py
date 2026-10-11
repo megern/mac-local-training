@@ -16,7 +16,7 @@ def main():
     adapters = sub.add_parser("plan-adapters", help="Model raw FP32 adapter-state components without loading a model")
     adapters.add_argument("--trainable-parameters", type=int, required=True)
     adapters.add_argument("--active-fraction", type=float, default=1.0)
-    train = sub.add_parser("train", aliases=["train-synchronous", "train-offloaded"],
+    train = sub.add_parser("train", aliases=["train-synchronous", "train-offloaded", "train-endpoint", "train-normalized"],
                           help="Train locally; train-synchronous uses deferred block Adam with extra recomputation")
     choice = train.add_mutually_exclusive_group(required=True)
     choice.add_argument("--model", type=Path)
@@ -56,7 +56,13 @@ def main():
                 learning_rate=args.learning_rate, rank=args.rank, max_seq_length=args.max_seq_length,
                 checkpoint_every=args.checkpoint_every, memory_budget_gib=args.memory_budget_gib,
                 resume=args.resume)
-            if args.command == 'train-offloaded':
+            if args.command == 'train-normalized':
+                from .normalization import StreamingNormalizationEngine
+                result = StreamingNormalizationEngine(config).run()
+            elif args.command == 'train-endpoint':
+                from .endpoint import EndpointTrainingEngine
+                result = EndpointTrainingEngine(config).run()
+            elif args.command == 'train-offloaded':
                 from .offloaded import OffloadedTrainingEngine
                 result = OffloadedTrainingEngine(config).run()
             elif args.command == 'train-synchronous':

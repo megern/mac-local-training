@@ -1,0 +1,5 @@
+{
+  "scope": "full_gradient_resident_bytes",
+  "note": "The frozen worker emits zero when the engine history does not record full-gradient residency. Zero for full Adam is missing-field metadata, not a measured zero allocation. Use MLX peak for the primary whole-loop memory comparison. Offloaded engines explicitly record full_gradient_resident_bytes.",
+  "optimizer_io_note": "The io dictionary counts optimizer-state operations only, not temporary gradient-file operations or physical SSD traffic."
+}

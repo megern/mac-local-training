@@ -1,0 +1,24 @@
+{
+  "status": "local review artifact; not published",
+  "runs": 36,
+  "no_datasets_or_weights_exported": true,
+  "original_protocol_sha256": "253fa8370cb79627b2940d22f1814207815eea773f0d72444c26f22fe5b3521e",
+  "note": "Local complete records/checkpoints remain private. Hashes and aggregate exports provide provenance, not independent authentication of the measurements.",
+  "exported_files_sha256": {
+    "analysis.json": "4070411a33bbade297464b13e8c49d7b9fa4e63b45f78dd0b580cb93e512f0b1",
+    "comparison.png": "50e53213bd1134e607cc95acea2c5f0f0b0a4ec0af3d96dc54061c2f781919ca",
+    "executed-source/mac_local_training/endpoint.py": "2f51f6e305a91c88cdc8d7813a07958d0bf7587620d583d2b8de8f44523464c6",
+    "executed-source/mac_local_training/engine.py": "2ec452eb4e6f8981bbf660f346599bd5244ef687284d4a0a908b9e67bc690381",
+    "executed-source/mac_local_training/normalization.py": "736effa0169ba6284caabf904d1b2bbe4d22c4d9c81584b392167eb102a5d826",
+    "executed-source/mac_local_training/offloaded.py": "87e6db0338843331b8aed41188c9cb9df7b76e9885feeaaf886fe17d7a99c646",
+    "executed-source/mac_local_training/synchronous.py": "79728b10c06352a2e7a7d50baa35c4d62320660383f6a902650091004078231e",
+    "executed-source/studies/analyze_normalization_study.py": "75a27ac280adde43797bf4fe19b71f7dc6bde67b65c79233ad216777a95abe07",
+    "executed-source/studies/endpoint_study.py": "69d13471c82f15203e0d0316d3e1af6948350f2bd91c0d52c2c754bc68c2fbdd",
+    "executed-source/studies/normalization_study.py": "bfa126e9be64db038233ca60a11622e959c88043d48c43998e8b4dc81c8e11b3",
+    "failure-ledger.json": "1f6819d4aa0767e09cc3151cb10e4dfb991dd7c7df9874face207ed6505f3497",
+    "host-environment.json": "4ee558b1a3e2e21e0699dac933f533f1aeecaf103d69b21bbaac933e0631ef87",
+    "measurement-errata.json": "ccd0a76fc27c165695d1d131e4b7756c71afae0d85a4e27685374cfc6904238f",
+    "protocol-design.json": "64cf841a2459770d7c8b6e87c037a28d07e5d8bf5195f4e0ce965fdf6e53c526",
+    "run-measurements.json": "59600e9a7c137f421d8d9986697d787c66a3ca296576b6971da7bc972a7c085e"
+  }
+}

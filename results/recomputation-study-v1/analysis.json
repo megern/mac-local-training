@@ -1,0 +1,418 @@
+{
+  "schema_version": 1,
+  "protocol_sha256": "c14d549031d5eafed95678cba07a3f9891fca2dc18301449d22c06a2bed7121e",
+  "runs_audited": 36,
+  "all_numerical_equivalence_gates_passed": true,
+  "state_switch_reduction_fraction": 0.0,
+  "primary_joint_gate_passed": true,
+  "comparisons": [
+    {
+      "rank": 4,
+      "paired_seed_blocks": [
+        {
+          "seed": 101,
+          "equivalence": {
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "recomputed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_recomputed_over_endpoint": 1.743390722504792,
+          "peak_recomputed_over_endpoint": 0.9922449180164454,
+          "logical_read_fraction": 2.666662812266071,
+          "logical_write_fraction": 2.6666624268266244,
+          "elapsed_endpoint_over_all": 2.033659949539639,
+          "elapsed_recomputed_over_all": 3.54546388875697,
+          "peak_endpoint_over_all": 0.9938888336806283,
+          "peak_recomputed_over_all": 0.9861811442928955
+        },
+        {
+          "seed": 113,
+          "equivalence": {
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "recomputed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_recomputed_over_endpoint": 1.977148779913075,
+          "peak_recomputed_over_endpoint": 0.9909649684213722,
+          "logical_read_fraction": 2.666662812266071,
+          "logical_write_fraction": 2.6666624268266244,
+          "elapsed_endpoint_over_all": 0.1303551961806693,
+          "elapsed_recomputed_over_all": 0.2577316170839398,
+          "peak_endpoint_over_all": 0.9965715727108522,
+          "peak_recomputed_over_all": 0.9875675170810468
+        },
+        {
+          "seed": 127,
+          "equivalence": {
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "recomputed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_recomputed_over_endpoint": 2.9325639411383033,
+          "peak_recomputed_over_endpoint": 0.9921488157773851,
+          "logical_read_fraction": 2.666662812266071,
+          "logical_write_fraction": 2.6666624268266244,
+          "elapsed_endpoint_over_all": 0.7219311719869789,
+          "elapsed_recomputed_over_all": 2.117109322952729,
+          "peak_endpoint_over_all": 0.9848544349976353,
+          "peak_recomputed_over_all": 0.9771221613960095
+        },
+        {
+          "seed": 139,
+          "equivalence": {
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "recomputed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_recomputed_over_endpoint": 2.0849798460597055,
+          "peak_recomputed_over_endpoint": 0.9926252351091541,
+          "logical_read_fraction": 2.666662812266071,
+          "logical_write_fraction": 2.6666624268266244,
+          "elapsed_endpoint_over_all": 1.0788207924357038,
+          "elapsed_recomputed_over_all": 2.2493196097386035,
+          "peak_endpoint_over_all": 0.9907691356594969,
+          "peak_recomputed_over_all": 0.9834624462229015
+        },
+        {
+          "seed": 151,
+          "equivalence": {
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "recomputed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_recomputed_over_endpoint": 1.9731876801295878,
+          "peak_recomputed_over_endpoint": 0.9909079573080642,
+          "logical_read_fraction": 2.666662812266071,
+          "logical_write_fraction": 2.6666624268266244,
+          "elapsed_endpoint_over_all": 0.9838527896657996,
+          "elapsed_recomputed_over_all": 1.9413262036296823,
+          "peak_endpoint_over_all": 0.9838428655575583,
+          "peak_recomputed_over_all": 0.9748977242217526
+        },
+        {
+          "seed": 163,
+          "equivalence": {
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "recomputed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_recomputed_over_endpoint": 1.8754403578020993,
+          "peak_recomputed_over_endpoint": 0.9922425865454498,
+          "logical_read_fraction": 2.666662812266071,
+          "logical_write_fraction": 2.6666624268266244,
+          "elapsed_endpoint_over_all": 1.8250784584514463,
+          "elapsed_recomputed_over_all": 3.422825797135084,
+          "peak_endpoint_over_all": 0.9957596825889325,
+          "peak_recomputed_over_all": 0.9880351630297186
+        }
+      ],
+      "elapsed": {
+        "geometric_mean_ratio": 2.0670096981808124,
+        "paired_bootstrap_95_ci": [
+          1.8566844931562803,
+          2.4055142984082156
+        ],
+        "ratios": [
+          1.743390722504792,
+          1.977148779913075,
+          2.9325639411383033,
+          2.0849798460597055,
+          1.9731876801295878,
+          1.8754403578020993
+        ]
+      },
+      "sign_test": {
+        "below_one": 0,
+        "above_one": 6,
+        "ties": 0,
+        "exact_two_sided_p": 0.03125
+      },
+      "memory": {
+        "geometric_mean_ratio": 0.9918555224067636,
+        "paired_bootstrap_95_ci": [
+          0.9913465248185921,
+          0.9923548772104827
+        ],
+        "ratios": [
+          0.9922449180164454,
+          0.9909649684213722,
+          0.9921488157773851,
+          0.9926252351091541,
+          0.9909079573080642,
+          0.9922425865454498
+        ]
+      },
+      "runtime_noninferiority_gate_passed": true,
+      "memory_reduction_gate_passed": false
+    },
+    {
+      "rank": 256,
+      "paired_seed_blocks": [
+        {
+          "seed": 101,
+          "equivalence": {
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "recomputed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_recomputed_over_endpoint": 1.7250188616821271,
+          "peak_recomputed_over_endpoint": 0.9290719014425712,
+          "logical_read_fraction": 2.66666661823037,
+          "logical_write_fraction": 2.6666666121758333,
+          "elapsed_endpoint_over_all": 3.3345206839205748,
+          "elapsed_recomputed_over_all": 5.752111074432178,
+          "peak_endpoint_over_all": 0.8981922482478905,
+          "peak_recomputed_over_all": 0.8344851799406456
+        },
+        {
+          "seed": 113,
+          "equivalence": {
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "recomputed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_recomputed_over_endpoint": 2.3297381747606294,
+          "peak_recomputed_over_endpoint": 0.928756288810495,
+          "logical_read_fraction": 2.66666661823037,
+          "logical_write_fraction": 2.6666666121758333,
+          "elapsed_endpoint_over_all": 0.5337288056345405,
+          "elapsed_recomputed_over_all": 1.243448373456185,
+          "peak_endpoint_over_all": 0.8959112122308227,
+          "peak_recomputed_over_all": 0.8320831725752106
+        },
+        {
+          "seed": 127,
+          "equivalence": {
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "recomputed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_recomputed_over_endpoint": 2.5127683653121116,
+          "peak_recomputed_over_endpoint": 0.9287608351550125,
+          "logical_read_fraction": 2.66666661823037,
+          "logical_write_fraction": 2.6666666121758333,
+          "elapsed_endpoint_over_all": 1.6535533337703956,
+          "elapsed_recomputed_over_all": 4.154996507454629,
+          "peak_endpoint_over_all": 0.8917504832176609,
+          "peak_recomputed_over_all": 0.8282229235431207
+        },
+        {
+          "seed": 139,
+          "equivalence": {
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "recomputed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_recomputed_over_endpoint": 3.6926580334640966,
+          "peak_recomputed_over_endpoint": 0.9294812951367449,
+          "logical_read_fraction": 2.66666661823037,
+          "logical_write_fraction": 2.6666666121758333,
+          "elapsed_endpoint_over_all": 1.209978730611928,
+          "elapsed_recomputed_over_all": 4.468037679914826,
+          "peak_endpoint_over_all": 0.8926069208930173,
+          "peak_recomputed_over_all": 0.8296614368796638
+        },
+        {
+          "seed": 151,
+          "equivalence": {
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "recomputed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_recomputed_over_endpoint": 2.310065315111633,
+          "peak_recomputed_over_endpoint": 0.9279766183428821,
+          "logical_read_fraction": 2.66666661823037,
+          "logical_write_fraction": 2.6666666121758333,
+          "elapsed_endpoint_over_all": 1.1402681784302577,
+          "elapsed_recomputed_over_all": 2.634093968917261,
+          "peak_endpoint_over_all": 0.895009897034225,
+          "peak_recomputed_over_all": 0.8305482576332311
+        },
+        {
+          "seed": 163,
+          "equivalence": {
+            "endpoint": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            },
+            "recomputed": {
+              "max_adapter_error": 0.0,
+              "max_optimizer_moment_error": 0.0,
+              "validation_nll_difference": 0.0
+            }
+          },
+          "elapsed_recomputed_over_endpoint": 1.9560499848679855,
+          "peak_recomputed_over_endpoint": 0.9290715602089206,
+          "logical_read_fraction": 2.66666661823037,
+          "logical_write_fraction": 2.6666666121758333,
+          "elapsed_endpoint_over_all": 1.7691488243648272,
+          "elapsed_recomputed_over_all": 3.4605435311280344,
+          "peak_endpoint_over_all": 0.8992710979844797,
+          "peak_recomputed_over_all": 0.8354872020552295
+        }
+      ],
+      "elapsed": {
+        "geometric_mean_ratio": 2.3501709465732303,
+        "paired_bootstrap_95_ci": [
+          1.9718332128934817,
+          2.880905344932728
+        ],
+        "ratios": [
+          1.7250188616821271,
+          2.3297381747606294,
+          2.5127683653121116,
+          3.6926580334640966,
+          2.310065315111633,
+          1.9560499848679855
+        ]
+      },
+      "sign_test": {
+        "below_one": 0,
+        "above_one": 6,
+        "ties": 0,
+        "exact_two_sided_p": 0.03125
+      },
+      "memory": {
+        "geometric_mean_ratio": 0.9288529686485806,
+        "paired_bootstrap_95_ci": [
+          0.9284714061901738,
+          0.9291728525628296
+        ],
+        "ratios": [
+          0.9290719014425712,
+          0.928756288810495,
+          0.9287608351550125,
+          0.9294812951367449,
+          0.9279766183428821,
+          0.9290715602089206
+        ]
+      },
+      "runtime_noninferiority_gate_passed": true,
+      "memory_reduction_gate_passed": true
+    }
+  ],
+  "limitations": [
+    "Single machine and single model; six seeds are not six machines.",
+    "Rank 256 intentionally stresses optimizer state and is not a typical small-rank LoRA workload.",
+    "Logical file bytes are not physical SSD traffic; OS page cache remains active.",
+    "Existing training/validation data are reused for numerical equivalence, not independent task-quality claims.",
+    "Available memory, swap, load and RSS are observed, not controlled; thermal state is not logged."
+  ],
+  "novelty_status": "Original empirical MLX study of exact deferred recomputation on a 16-GiB M1; recomputation/offloading are established. Algorithm priority and literature superiority are not claimed.",
+  "source_result_sha256": {
+    "rank-4-seed-101-all": "281967676bdd6ecba4e56f9487c457833548342a8574dfb0e0c12c96cf22815e",
+    "rank-4-seed-101-endpoint": "b7fb6f04bdd3951011aa1c636a8446a26203020da9d6e241859d00846a8cf646",
+    "rank-4-seed-101-recomputed": "eb9f668cb67dbb5cbd66d006dbc9a404da7e65c994839f9004d4176f2ce14fb0",
+    "rank-256-seed-101-all": "a33d99b7e051856405e66985ce73c216ef1f5ad7b88fc439d760606c00b1ce38",
+    "rank-256-seed-101-endpoint": "63093454101aba448dea70d80bda0416b17c2e7a5026aa5ca89781659cb47964",
+    "rank-256-seed-101-recomputed": "d77a34c71806b13f68a91f1d1d105068d61aadaa68e7b1f72e375fdf74a5d1e2",
+    "rank-256-seed-113-all": "9e125412aac7a14c622bcd39cd57144044fd6aa275486f09fa955a6c64ed0d15",
+    "rank-256-seed-113-recomputed": "34cf98c87ce50a247980b46282828bc6d7ac991323288c75c9ec7de23634acfa",
+    "rank-256-seed-113-endpoint": "073a5ee46e033f8b33204281e113304450b5c01ee50d279a106668ddb24c8430",
+    "rank-4-seed-113-all": "9dd449bfeee3b01e145145effbc2e7a7cd15a900b252fffb289488b1e6272d83",
+    "rank-4-seed-113-recomputed": "af7f69d1d0e17ad693ddc61ef2f737da5940031d3792d91a83f27c5d53cac1e7",
+    "rank-4-seed-113-endpoint": "b7a5f636d0ea55ae663a1a17f79fda180605ad24938e07680cf10317ba00c0d8",
+    "rank-4-seed-127-endpoint": "0dff13fb3d287da7c04a1846c15c8c11995244dd842d631391fe29ef40de9ed9",
+    "rank-4-seed-127-all": "206cb6b987de004189e63f8b0d9248fd2c6c370d2fdff242f28bbffea5dbe725",
+    "rank-4-seed-127-recomputed": "7723d3c11cde2e2a54befa24bc100d70a582b906cc8afca92f298baa0c60310f",
+    "rank-256-seed-127-endpoint": "49960c5c8d198b6588fbe95979c4ad758a55e6d9e8a6ddb3e24095437b5bd4e8",
+    "rank-256-seed-127-all": "ddcb9f67eca947cf1e056484c4e4d912ef9bf88c2e33f2f76ab1db2e220d7400",
+    "rank-256-seed-127-recomputed": "461993ddd36063e756c197decbf86111691db456562236bd337e1af7dfb78845",
+    "rank-256-seed-139-endpoint": "2c8e60cd91a141acbc91b8b19a8cd14901eaa8668f6a58072677f0d986184246",
+    "rank-256-seed-139-recomputed": "03227f1d1def0c54a2701f73c39697a6333b8d5da268f7b296ef6e53ed8793d9",
+    "rank-256-seed-139-all": "442a6e67e1b98334593c9dd04c4f890020430465439b8581a2f70210da83554b",
+    "rank-4-seed-139-endpoint": "25939001b067155ce37e7ca576ca095456e612d319e7d00614fce3ae2b19cc68",
+    "rank-4-seed-139-recomputed": "bf3144e978186f2da40a67b19c2100534f350f60823995cbe4cb3006dbf1eed4",
+    "rank-4-seed-139-all": "82fc3a5c5ff6fdf6868f657f7b21531f2a9e5c2ed6b9804d69b1dd76ec0640e5",
+    "rank-4-seed-151-recomputed": "8412dc0ced765083f79a98551efd424247cd63d78c297a85c6dffa357ce11fdf",
+    "rank-4-seed-151-all": "665a5cf2545ea2f8fa1f9f6259093663cc9e3de0bd0eb3ee3418e992cbce2f9e",
+    "rank-4-seed-151-endpoint": "48f5395121cb59d061cf1a207ff9d12e7eb2e7c01798a273c1e2890cf1c76d42",
+    "rank-256-seed-151-recomputed": "aaf8e78a0788a34be5c39d7eef1cdfb382dff4613cd019fe7f3627469366645e",
+    "rank-256-seed-151-all": "5b2d3985f420a210f3e25914e02a6c7be39ec1fc73cb0fd634cd79bd17e02ca6",
+    "rank-256-seed-151-endpoint": "fd7752d5b5419f90bf9c0dcb2e1318d78d80b4842de6383bc6c3e66479c0b884",
+    "rank-256-seed-163-recomputed": "54a5c0942969ab6d435a9028f4e5a6b18ce3e36346571fd46951834029021ccf",
+    "rank-256-seed-163-endpoint": "5068a2191b20643920434779c03eb9f0c83b32b16b97c578130673bca43bf4d8",
+    "rank-256-seed-163-all": "41ce5d3887bec343b3b434f40e5e085c3da21ff45fe0329d49b47a92b722d597",
+    "rank-4-seed-163-recomputed": "919180c83db0dc100c876d99ff306dcf573af52768c0fe1b2733a425897e1092",
+    "rank-4-seed-163-endpoint": "e072a33b71e4333dafa8384f2bb2def9aafffe6547ecc3c77a054c5288b17508",
+    "rank-4-seed-163-all": "4db04c122af39ed9b8204438b8fddb086cca93bb3872b1f733e71caba591d211"
+  }
+}

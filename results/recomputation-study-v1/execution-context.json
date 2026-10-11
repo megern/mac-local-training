@@ -1,0 +1,11 @@
+{
+  "scope": "Shared-machine execution context, recorded during the frozen study; not a protocol change.",
+  "concurrent_project_activity": [
+    "Source/document editing and lightweight CPU integrity/CLI tests.",
+    "Local tokenizer reconstruction and plotting of earlier completed studies."
+  ],
+  "other_project_mlx_jobs_during_measurement": false,
+  "user_apps_closed": false,
+  "thermal_state_logged": false,
+  "interpretation": "External update-loop times are conditional shared-machine measurements. Background CPU/GPU/system activity is not fully controlled. No causal speedup claim follows from a favorable ratio alone."
+}

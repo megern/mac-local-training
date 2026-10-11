@@ -1,0 +1,36 @@
+{
+  "status": "local review artifact; not published",
+  "completed_research_runs": 108,
+  "repository_tests_passed": 38,
+  "primary_model": "Original Qwen3-0.6B BF16, frozen base with q/v LoRA; not full-base fine-tuning",
+  "primary_hardware": "Apple M1, 16 GiB unified memory",
+  "confirmed_local_claim": {
+    "method": "Deferred group-gradient recomputation versus single-pass endpoint retention",
+    "rank": 256,
+    "mlx_peak_reduction_percent": 7.1147031351419425,
+    "memory_ratio_95_ci": [
+      0.9284714061901738,
+      0.9291728525628296
+    ],
+    "elapsed_geometric_mean_ratio": 2.3501709465732303,
+    "elapsed_ratio_95_ci": [
+      1.9718332128934817,
+      2.880905344932728
+    ],
+    "numerical_equivalence_passed": true,
+    "evidence": "results/recomputation-study-v1/analysis.json"
+  },
+  "not_established": [
+    "Algorithmic novelty or superiority over complete prior offload systems.",
+    "Physical RAM savings equal to the MLX allocator percentage.",
+    "Original-weight 70B practical fit/training.",
+    "Independent task-quality improvement or long-run convergence.",
+    "Generalization to other models, context lengths, machines or external replications."
+  ],
+  "earlier_primary_gates": {
+    "endpoint_speed": false,
+    "group_local_normalization_memory_runtime": false
+  },
+  "reproduction": "docs/recomputation-reproduction.md",
+  "paper": "papers/optimizer-lifetime-study.md"
+}

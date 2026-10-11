@@ -1,0 +1,25 @@
+{
+  "status": "local review artifact; not published",
+  "runs": 36,
+  "no_datasets_or_weights_exported": true,
+  "original_protocol_sha256": "c14d549031d5eafed95678cba07a3f9891fca2dc18301449d22c06a2bed7121e",
+  "note": "Local complete records/checkpoints remain private. Hashes and aggregate exports provide provenance, not independent authentication of the measurements.",
+  "exported_files_sha256": {
+    "analysis.json": "b781f0b485f457a43e7f0e1cc02e19991ca8cf7432af37234b239cb1d78587a7",
+    "comparison.png": "9df9d836be4a1c16b31f5495e78dd89ab927eec72d64b8da178a2bf0282071a2",
+    "data-manifest.json": "0b5b30d701df80f136f5a37102b138a27fe07d6e6a8494786478b12495617c9c",
+    "executed-source/mac_local_training/endpoint.py": "2f51f6e305a91c88cdc8d7813a07958d0bf7587620d583d2b8de8f44523464c6",
+    "executed-source/mac_local_training/engine.py": "2ec452eb4e6f8981bbf660f346599bd5244ef687284d4a0a908b9e67bc690381",
+    "executed-source/mac_local_training/offloaded.py": "87e6db0338843331b8aed41188c9cb9df7b76e9885feeaaf886fe17d7a99c646",
+    "executed-source/mac_local_training/synchronous.py": "79728b10c06352a2e7a7d50baa35c4d62320660383f6a902650091004078231e",
+    "executed-source/studies/analyze_recomputation_study.py": "b8109dd66088204d156fd3a112191c9a7412e1599e49b3c7ffa00b85428a1a5a",
+    "executed-source/studies/endpoint_study.py": "69d13471c82f15203e0d0316d3e1af6948350f2bd91c0d52c2c754bc68c2fbdd",
+    "executed-source/studies/recomputation_study.py": "073453bc04d90e16cc143a278e71ed150066df0838369bd63d87430489463de4",
+    "executed-source/studies/supervise_optimizer_study.py": "3329d33901b74f99825af0362d748b01cb96f7c305a34804db60985de95bb55d",
+    "execution-audit.json": "5cf3cd639a0e791b9cbee55999a56e9a6d876b2595aa161fc053109bfd3db1ac",
+    "execution-context.json": "2e1c0b444645233545ad5d49a2cbbeec2a550424eeb786a3303025bae7d2f3ff",
+    "host-environment.json": "4ee558b1a3e2e21e0699dac933f533f1aeecaf103d69b21bbaac933e0631ef87",
+    "protocol-design.json": "96cc635c15c5bbb68ef0c56d75b1fd33cc7056eb542c5309d97fd210254c0232",
+    "run-measurements.json": "f2232af58046636bc114eef6e2437614cbd30fcf7ec9c0b977c9f2fe538c7f12"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "python": "3.14.7",
+  "architecture": "arm64",
+  "packages": {
+    "mlx": "0.32.3",
+    "mlx-lm": "0.32.0",
+    "psutil": "7.2.2",
+    "numpy": "2.5.3",
+    "safetensors": "0.8.0",
+    "transformers": "5.19.0"
+  },
+  "compute": "Local Apple Silicon only; sequential fresh-process workers.",
+  "shared_machine": true,
+  "hardware": {
+    "model": "MacBookPro17,1",
+    "chip": "Apple M1",
+    "memory_bytes": 17179869184,
+    "kernel_osrelease": "25.6.0"
+  }
+}

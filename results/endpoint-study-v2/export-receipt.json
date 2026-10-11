@@ -1,0 +1,23 @@
+{
+  "status": "local review artifact; not published",
+  "runs": 36,
+  "no_datasets_or_weights_exported": true,
+  "original_protocol_sha256": "66b1cfec6a9aa5324cbcd7a15e441eb2d53fac4039dc834ff850f8f455a0c7b6",
+  "note": "Local complete records/checkpoints remain private. Hashes and aggregate exports provide provenance, not independent authentication of the measurements.",
+  "exported_files_sha256": {
+    "analysis.json": "acd83816f55df1f3aa669618e9c76a871033b4b9a55de2b66a28707e8195459b",
+    "comparison.png": "fe824d9b027ea2596d0429541006032a6ea2fa2412735160f016b798ab4be905",
+    "data-manifest.json": "2d2386845b39bd41c58b5cb7c66ed29709b9783131dc6214701d4e223d3335a9",
+    "executed-source/mac_local_training/endpoint.py": "2f51f6e305a91c88cdc8d7813a07958d0bf7587620d583d2b8de8f44523464c6",
+    "executed-source/mac_local_training/engine.py": "2ec452eb4e6f8981bbf660f346599bd5244ef687284d4a0a908b9e67bc690381",
+    "executed-source/mac_local_training/offloaded.py": "87e6db0338843331b8aed41188c9cb9df7b76e9885feeaaf886fe17d7a99c646",
+    "executed-source/mac_local_training/synchronous.py": "79728b10c06352a2e7a7d50baa35c4d62320660383f6a902650091004078231e",
+    "executed-source/studies/analyze_endpoint_study.py": "9896c35488b2bdea52be271a8b618218041fde568da9a09953a6946f5da98a1f",
+    "executed-source/studies/endpoint_study.py": "69d13471c82f15203e0d0316d3e1af6948350f2bd91c0d52c2c754bc68c2fbdd",
+    "host-environment.json": "4ee558b1a3e2e21e0699dac933f533f1aeecaf103d69b21bbaac933e0631ef87",
+    "measurement-errata.json": "ccd0a76fc27c165695d1d131e4b7756c71afae0d85a4e27685374cfc6904238f",
+    "prior-art.json": "cab31006b9783dd6b16d817102d3884a899766b22cc4a0e190db9590075b5409",
+    "protocol-design.json": "1999d4adea898eef7da949c1aa15100ad6fa5aac8dbc529b4d161553cac89d04",
+    "run-measurements.json": "03a55e4681e12f3c7ba83292e643d2392549a228affe9886d1bc735bffc4ccef"
+  }
+}
