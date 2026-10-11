@@ -4,11 +4,19 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mac-local-training"
-version = "0.1.0"
+version = "0.2.0"
 description = "Local MLX adapter-window experiments with disk-backed optimizer state"
 requires-python = ">=3.10"
-dependencies = ["mlx==0.32.3", "mlx-lm[train]==0.32.0", "psutil==7.2.2"]
 license = "MIT"
+dependencies = []
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.10,<4"]
+train = ["mlx==0.32.3", "mlx-lm[train]==0.32.0", "psutil==7.2.2"]
+
+[project.urls]
+Repository = "https://github.com/megern/mac-local-training"
+Issues = "https://github.com/megern/mac-local-training/issues"
 
 [project.scripts]
 mac-local-training = "mac_local_training.cli:main"

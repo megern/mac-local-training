@@ -1,12 +1,27 @@
 # Mac Local Training
 
+## Public preview v0.2.0
+
+Python 3.11+; commands below use a local Mac/Linux shell. Source and reports are public; this is a research/development preview, not a production-security certification.
+
+```sh
+git clone --branch v0.2.0 https://github.com/megern/mac-local-training.git
+cd mac-local-training
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install .
+mac-local-training --help
+```
+
+The installed entry point was exercised outside the checkout in a separate local environment. This revision has 17 passing local tests. No hosted CI or cloud compute is used. Report an issue with the command, Python/OS versions, sanitized input and expected/actual behavior; remove credentials and private records first. Benchmarks describe the supplied fixtures and hardware.
+
 An MLX experiment for Apple Silicon: keep base weights frozen, train small LoRA windows in turn, and move inactive Adam state to disk. It compares this schedule with updating all adapters on the same stream of tokens.
 
 Measured runs use an Apple M1 with 16GB unified memory: a tiny, randomly initialized Qwen2 model for software checks, and a local 4-bit Qwen3 0.6B for a short paired LoRA experiment. These runs check optimization and memory behavior. They do **not** establish useful cybersecurity-model quality or that a huge base model fits this Mac.
 
 ## Run locally
 
-Requires an Apple Silicon Mac with a working Metal GPU. No cloud training, inference API, hosted experiment logger, or hosted CI is used. Installing dependencies downloads public packages; actual training has no download path.
+Training requires an Apple Silicon Mac with a working Metal GPU; planning and doctor use standard Python on other platforms. No cloud training, inference API, hosted experiment logger, or hosted CI is used. Installing dependencies downloads public packages; actual training has no download path.
 
 ```sh
 python3 -m venv .venv
@@ -65,3 +80,18 @@ python3 -m unittest discover -s tests
 ```
 
 The planner separately reports resident FP32 adapter parameters, active gradients and two active Adam moments. For 655,360 parameters, the full state components total 10,485,760 bytes; a quarter-active model totals 4,587,520 bytes while all adapter parameters remain resident. This assumes inactive gradients and optimizer moments are released. These are raw component calculations, not measured RAM savings. Frozen base weights, activations, runtime overhead and OS headroom are excluded. Rotation does not make a 70B original model fit in 16 GiB.
+
+
+### Portable planning, optional training and three-seed residency checks
+
+```sh
+mac-local-training doctor
+python3 -m pip install '.[train]'   # Apple Silicon training dependencies only
+python3 run_tiny_study.py --output /tmp/tiny-study-new
+```
+
+Planning and `doctor` install without MLX. `doctor` discovers platform/modules without initializing Metal or downloading a model. Training requires the optional `[train]` extra on an Apple Silicon Mac. `--seed` records initialization and data-order choices.
+
+`results/tiny-residency-20261011/` contains six fresh-process runs with fixed seeds 11/29/47, 16 updates and matched synthetic data. Resident optimizer bytes are 14,348 for all-adapter updates and 3,596 for rotating updates for every seed. These are optimizer-state bytes, not total process memory. Rotating layers receive fewer updates; the NLL changes differ as expected, so this is not an equal-optimization or useful-model-quality comparison. Sources and protocol were frozen before execution. Weights/checkpoints remain local. See the per-run report for MLX allocations, RSS, token coverage and timing definitions.
+
+Recreate the diagnostic figure with `python3 -m pip install '.[plots]'` and `python3 plot_tiny_study.py`. Plotting reads the published JSON and performs no training.

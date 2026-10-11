@@ -8,6 +8,7 @@ from .planner import estimate, estimate_adapter_state
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
+    sub.add_parser("doctor", help="Inspect platform/dependencies without importing Metal")
     plan = sub.add_parser("plan", help="Show the raw-weight lower bound; no model is loaded")
     plan.add_argument("--parameters-billions", type=float, required=True)
     plan.add_argument("--bits", type=int, default=4)
@@ -23,6 +24,7 @@ def main():
     train.add_argument("--valid-data", type=Path, required=True)
     train.add_argument("--output", type=Path, required=True)
     train.add_argument("--strategy", choices=["all", "rotating"], default="rotating")
+    train.add_argument("--seed", type=int, default=17, help="Recorded local initialization and data-order seed")
     train.add_argument("--steps", type=int, default=12)
     train.add_argument("--microbatch-size", type=int, default=1)
     train.add_argument("--accumulation-steps", type=int, default=2)
@@ -36,7 +38,10 @@ def main():
     train.add_argument("--resume", action="store_true")
     args = parser.parse_args()
     try:
-        if args.command == "plan-adapters":
+        if args.command == "doctor":
+            from .doctor import diagnose
+            result = diagnose()
+        elif args.command == "plan-adapters":
             result = estimate_adapter_state(args.trainable_parameters, args.active_fraction)
         elif args.command == "plan":
             result = estimate(args.parameters_billions, args.bits, args.memory_budget_gib)
@@ -44,7 +49,7 @@ def main():
             from .engine import TrainingConfig, run_training
             config = TrainingConfig(train_path=str(args.train_data), valid_path=str(args.valid_data),
                 output_path=str(args.output), model_path=str(args.model) if args.model else None,
-                tiny_model=args.tiny, strategy=args.strategy, steps=args.steps,
+                tiny_model=args.tiny, strategy=args.strategy, steps=args.steps, seed=args.seed,
                 microbatch_size=args.microbatch_size, accumulation_steps=args.accumulation_steps,
                 window_layers=args.window_layers, window_updates=args.window_updates,
                 learning_rate=args.learning_rate, rank=args.rank, max_seq_length=args.max_seq_length,

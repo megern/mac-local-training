@@ -1,0 +1,45 @@
+{
+  "planned_at_unix": 1791707919.082803,
+  "cells": [
+    {
+      "seed": 11,
+      "strategy": "all"
+    },
+    {
+      "seed": 47,
+      "strategy": "all"
+    },
+    {
+      "seed": 11,
+      "strategy": "rotating"
+    },
+    {
+      "seed": 47,
+      "strategy": "rotating"
+    },
+    {
+      "seed": 29,
+      "strategy": "all"
+    },
+    {
+      "seed": 29,
+      "strategy": "rotating"
+    }
+  ],
+  "steps": 16,
+  "accumulation_steps": 2,
+  "max_seq_length": 32,
+  "source_sha256": {
+    "mac_local_training/engine.py": "26d7047e37b192cfb984183eadb312611ced1cbce5e51b893468a2133bbff565",
+    "mac_local_training/cli.py": "43fd51dd2ec8e5ecd383dc23d1ce5a6c4f14b5088be75970b81a4c776639757a",
+    "run_tiny_study.py": "5678d4fff077f1b0d0991ee6457a04029ef2b04053b2612d1bc2bac7de242b97",
+    "examples/train.jsonl": "ce05ad9142a60dc53d57a4559aa05c71d99760adc0ec0662bf7eab36ec0dce15",
+    "examples/valid.jsonl": "8e101959a766623e92cd804c9827bfa9265aac55f43a1dac90b3b8e463c5fcad"
+  },
+  "scope": "Three fixed seeds, random tiny models and synthetic token data. Matched data/steps, different layer update coverage. No useful model-quality, generalization or total-RAM savings claim.",
+  "guards": {
+    "process_tree_rss_gib": 6,
+    "system_swap_growth_mib": 1536,
+    "timeout_seconds": 180
+  }
+}

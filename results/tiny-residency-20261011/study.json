@@ -1,0 +1,2166 @@
+{
+  "protocol_sha256": "224ffda3560aaceb87332942e382ac73e71c00a10dc86cae4392c43cdbf186ca",
+  "results": [
+    {
+      "cell": {
+        "seed": 11,
+        "strategy": "all"
+      },
+      "exit_code": 0,
+      "guard_stop": null,
+      "process_tree_rss_peak_bytes": 111837184,
+      "wall_seconds": 2.3485388751141727,
+      "report": {
+        "mode": "random_tiny_software_check",
+        "strategy": "all",
+        "steps": 16,
+        "microbatches": 32,
+        "examples_consumed": 32,
+        "tokens": 939,
+        "training_seconds": 0.23318479303270578,
+        "tokens_per_second": 4026.849211682079,
+        "end_to_end_seconds_this_process_segment": 0.6071067498996854,
+        "tokens_per_second_including_io_and_validation_this_process_segment": 1546.680217532015,
+        "heldout_nll_before": 6.062569891388093,
+        "heldout_nll_after": 5.6953871837213415,
+        "heldout_nll_change": -0.36718270766675154,
+        "layer_update_coverage": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "layer_update_fraction": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "peak_optimizer_resident_bytes": 14348,
+        "mlx_peak_bytes_this_process_segment": 1309754,
+        "process_rss_high_water_bytes": 111771648,
+        "groups": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ],
+        "history": [
+          {
+            "step": 1,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 6.147356033325195,
+            "tokens": 64,
+            "seconds": 0.03140708291903138,
+            "tokens_per_second": 2037.7569023202302,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1171638,
+            "process_rss_high_water_bytes": 110968832
+          },
+          {
+            "step": 2,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.9274375438690186,
+            "tokens": 64,
+            "seconds": 0.013150125043466687,
+            "tokens_per_second": 4866.87387294441,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1218870,
+            "process_rss_high_water_bytes": 110985216
+          },
+          {
+            "step": 3,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 6.075712442398071,
+            "tokens": 64,
+            "seconds": 0.013792291982099414,
+            "tokens_per_second": 4640.272993282306,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1309754,
+            "process_rss_high_water_bytes": 111116288
+          },
+          {
+            "step": 4,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 6.224608659744263,
+            "tokens": 64,
+            "seconds": 0.01359562505967915,
+            "tokens_per_second": 4707.396660254057,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1309754,
+            "process_rss_high_water_bytes": 111116288
+          },
+          {
+            "step": 5,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.826896505152925,
+            "tokens": 47,
+            "seconds": 0.013791124802082777,
+            "tokens_per_second": 3407.988882306534,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1309754,
+            "process_rss_high_water_bytes": 111214592
+          },
+          {
+            "step": 6,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 6.079474505256204,
+            "tokens": 51,
+            "seconds": 0.013615458039566875,
+            "tokens_per_second": 3745.7425120618545,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1309754,
+            "process_rss_high_water_bytes": 111214592
+          },
+          {
+            "step": 7,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.900822639465332,
+            "tokens": 64,
+            "seconds": 0.013351083034649491,
+            "tokens_per_second": 4793.618602618496,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1309754,
+            "process_rss_high_water_bytes": 111214592
+          },
+          {
+            "step": 8,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 6.010015249252319,
+            "tokens": 64,
+            "seconds": 0.01351308380253613,
+            "tokens_per_second": 4736.150603016945,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1309754,
+            "process_rss_high_water_bytes": 111214592
+          },
+          {
+            "step": 9,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.912381490071614,
+            "tokens": 48,
+            "seconds": 0.013358250027522445,
+            "tokens_per_second": 3593.285041162129,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1309754,
+            "process_rss_high_water_bytes": 111263744
+          },
+          {
+            "step": 10,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.89903423832912,
+            "tokens": 51,
+            "seconds": 0.013301042141392827,
+            "tokens_per_second": 3834.2860249489822,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1309754,
+            "process_rss_high_water_bytes": 111312896
+          },
+          {
+            "step": 11,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.685450553894043,
+            "tokens": 64,
+            "seconds": 0.013405834091827273,
+            "tokens_per_second": 4774.040881127787,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1309754,
+            "process_rss_high_water_bytes": 111312896
+          },
+          {
+            "step": 12,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.802409523411801,
+            "tokens": 38,
+            "seconds": 0.013223583111539483,
+            "tokens_per_second": 2873.653810731489,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1309754,
+            "process_rss_high_water_bytes": 111312896
+          },
+          {
+            "step": 13,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.94010329246521,
+            "tokens": 64,
+            "seconds": 0.013537291903048754,
+            "tokens_per_second": 4727.681168313026,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1309754,
+            "process_rss_high_water_bytes": 111312896
+          },
+          {
+            "step": 14,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.8206963539123535,
+            "tokens": 64,
+            "seconds": 0.013500457862392068,
+            "tokens_per_second": 4740.57996049774,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1309754,
+            "process_rss_high_water_bytes": 111312896
+          },
+          {
+            "step": 15,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.764291286468506,
+            "tokens": 64,
+            "seconds": 0.013441917020827532,
+            "tokens_per_second": 4761.225642208282,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1309754,
+            "process_rss_high_water_bytes": 111312896
+          },
+          {
+            "step": 16,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.5085039138793945,
+            "tokens": 64,
+            "seconds": 0.013200542191043496,
+            "tokens_per_second": 4848.285704766255,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1309754,
+            "process_rss_high_water_bytes": 111312896
+          }
+        ],
+        "mlx_memory_budget_bytes": 6442450944,
+        "train_token_windows": 168,
+        "valid_token_windows": 42,
+        "dataset_loading": "in_memory_causal_windows_with_one_token_overlap",
+        "identity": {
+          "config": {
+            "train_path": "/Users/a2/Documents/Codex/2026-10-07/new-chat/outputs/mac-local-training/examples/train.jsonl",
+            "valid_path": "/Users/a2/Documents/Codex/2026-10-07/new-chat/outputs/mac-local-training/examples/valid.jsonl",
+            "model_path": null,
+            "tiny_model": true,
+            "strategy": "all",
+            "microbatch_size": 1,
+            "accumulation_steps": 2,
+            "window_layers": 1,
+            "window_updates": 1,
+            "learning_rate": 0.001,
+            "rank": 4,
+            "lora_scale": 1.0,
+            "seed": 11,
+            "max_seq_length": 32,
+            "memory_budget_gib": 6
+          },
+          "train_sha256": "ce05ad9142a60dc53d57a4559aa05c71d99760adc0ec0662bf7eab36ec0dce15",
+          "valid_sha256": "8e101959a766623e92cd804c9827bfa9265aac55f43a1dac90b3b8e463c5fcad",
+          "model_files": {
+            "tiny_qwen2": "4_layers_32_hidden_64_intermediate_259_vocab_v1"
+          },
+          "versions": {
+            "mlx": "0.32.3",
+            "mlx-lm": "0.32.0"
+          }
+        },
+        "limitations": [
+          "Frozen base and all adapters still need to fit unified memory.",
+          "MLX memory limit is an allocation guard, not a hard process RSS cap or fit guarantee.",
+          "Combined JSONL files are capped at 64 MiB; this prototype is not a streaming corpus loader.",
+          "Long rows are split without dropping targets; attention context resets at window boundaries.",
+          "Rotating windows give each layer fewer updates than the all-adapter baseline.",
+          "Training throughput excludes optimizer-state swap I/O, checkpoint I/O and validation.",
+          "RSS is a process high-water mark; compare strategies in fresh processes.",
+          "Tiny random-model results validate software, not useful model quality."
+        ]
+      },
+      "report_sha256": "01e586bdaf14555c98a552058fdda4ae828ed9191a0f679b31b8ba0fdf613ec6"
+    },
+    {
+      "cell": {
+        "seed": 47,
+        "strategy": "all"
+      },
+      "exit_code": 0,
+      "guard_stop": null,
+      "process_tree_rss_peak_bytes": 111575040,
+      "wall_seconds": 1.505657082889229,
+      "report": {
+        "mode": "random_tiny_software_check",
+        "strategy": "all",
+        "steps": 16,
+        "microbatches": 32,
+        "examples_consumed": 32,
+        "tokens": 852,
+        "training_seconds": 0.21673279232345521,
+        "tokens_per_second": 3931.1079364882758,
+        "end_to_end_seconds_this_process_segment": 0.3302569999359548,
+        "tokens_per_second_including_io_and_validation_this_process_segment": 2579.8090582946747,
+        "heldout_nll_before": 5.883633957036976,
+        "heldout_nll_after": 5.485668725504149,
+        "heldout_nll_change": -0.3979652315328268,
+        "layer_update_coverage": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "layer_update_fraction": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "peak_optimizer_resident_bytes": 14348,
+        "mlx_peak_bytes_this_process_segment": 1323002,
+        "process_rss_high_water_bytes": 111493120,
+        "groups": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ],
+        "history": [
+          {
+            "step": 1,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.775492051068475,
+            "tokens": 51,
+            "seconds": 0.014983792090788484,
+            "tokens_per_second": 3403.6777666818425,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 975538,
+            "process_rss_high_water_bytes": 110788608
+          },
+          {
+            "step": 2,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 6.02820376132397,
+            "tokens": 47,
+            "seconds": 0.013353666989132762,
+            "tokens_per_second": 3519.632475352926,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1240566,
+            "process_rss_high_water_bytes": 110886912
+          },
+          {
+            "step": 3,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.907457590103149,
+            "tokens": 64,
+            "seconds": 0.013236874947324395,
+            "tokens_per_second": 4834.978063529753,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1276534,
+            "process_rss_high_water_bytes": 110919680
+          },
+          {
+            "step": 4,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.94744873046875,
+            "tokens": 47,
+            "seconds": 0.013286125147715211,
+            "tokens_per_second": 3537.5250102986197,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1316598,
+            "process_rss_high_water_bytes": 111034368
+          },
+          {
+            "step": 5,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.9452533298068575,
+            "tokens": 45,
+            "seconds": 0.01330824987962842,
+            "tokens_per_second": 3381.3612163146763,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1323002,
+            "process_rss_high_water_bytes": 111034368
+          },
+          {
+            "step": 6,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.9296944800843585,
+            "tokens": 47,
+            "seconds": 0.013217583997175097,
+            "tokens_per_second": 3555.8692125614625,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1323002,
+            "process_rss_high_water_bytes": 111034368
+          },
+          {
+            "step": 7,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.910598278045654,
+            "tokens": 64,
+            "seconds": 0.0133523338008672,
+            "tokens_per_second": 4793.169565296769,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1323002,
+            "process_rss_high_water_bytes": 111034368
+          },
+          {
+            "step": 8,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.696967124938965,
+            "tokens": 64,
+            "seconds": 0.01332116685807705,
+            "tokens_per_second": 4804.3839313666995,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1323002,
+            "process_rss_high_water_bytes": 111034368
+          },
+          {
+            "step": 9,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.90739893913269,
+            "tokens": 64,
+            "seconds": 0.013659083051607013,
+            "tokens_per_second": 4685.526821836719,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1323002,
+            "process_rss_high_water_bytes": 111034368
+          },
+          {
+            "step": 10,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.738309657320063,
+            "tokens": 47,
+            "seconds": 0.014155040960758924,
+            "tokens_per_second": 3320.3718823770955,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1323002,
+            "process_rss_high_water_bytes": 111050752
+          },
+          {
+            "step": 11,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.345764499240452,
+            "tokens": 45,
+            "seconds": 0.014965042006224394,
+            "tokens_per_second": 3007.007930968934,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1323002,
+            "process_rss_high_water_bytes": 111050752
+          },
+          {
+            "step": 12,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.711184400193234,
+            "tokens": 47,
+            "seconds": 0.013135166838765144,
+            "tokens_per_second": 3578.180663932742,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1323002,
+            "process_rss_high_water_bytes": 111050752
+          },
+          {
+            "step": 13,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.737666998969184,
+            "tokens": 45,
+            "seconds": 0.013085582992061973,
+            "tokens_per_second": 3438.8991325260845,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1323002,
+            "process_rss_high_water_bytes": 111050752
+          },
+          {
+            "step": 14,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.933771371841431,
+            "tokens": 64,
+            "seconds": 0.013329125009477139,
+            "tokens_per_second": 4801.5154749089215,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1323002,
+            "process_rss_high_water_bytes": 111050752
+          },
+          {
+            "step": 15,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.318010533109624,
+            "tokens": 47,
+            "seconds": 0.01302287494763732,
+            "tokens_per_second": 3609.0341179638676,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1323002,
+            "process_rss_high_water_bytes": 111050752
+          },
+          {
+            "step": 16,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.054183483123779,
+            "tokens": 64,
+            "seconds": 0.01332108280621469,
+            "tokens_per_second": 4804.4142455253,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1323002,
+            "process_rss_high_water_bytes": 111050752
+          }
+        ],
+        "mlx_memory_budget_bytes": 6442450944,
+        "train_token_windows": 168,
+        "valid_token_windows": 42,
+        "dataset_loading": "in_memory_causal_windows_with_one_token_overlap",
+        "identity": {
+          "config": {
+            "train_path": "/Users/a2/Documents/Codex/2026-10-07/new-chat/outputs/mac-local-training/examples/train.jsonl",
+            "valid_path": "/Users/a2/Documents/Codex/2026-10-07/new-chat/outputs/mac-local-training/examples/valid.jsonl",
+            "model_path": null,
+            "tiny_model": true,
+            "strategy": "all",
+            "microbatch_size": 1,
+            "accumulation_steps": 2,
+            "window_layers": 1,
+            "window_updates": 1,
+            "learning_rate": 0.001,
+            "rank": 4,
+            "lora_scale": 1.0,
+            "seed": 47,
+            "max_seq_length": 32,
+            "memory_budget_gib": 6
+          },
+          "train_sha256": "ce05ad9142a60dc53d57a4559aa05c71d99760adc0ec0662bf7eab36ec0dce15",
+          "valid_sha256": "8e101959a766623e92cd804c9827bfa9265aac55f43a1dac90b3b8e463c5fcad",
+          "model_files": {
+            "tiny_qwen2": "4_layers_32_hidden_64_intermediate_259_vocab_v1"
+          },
+          "versions": {
+            "mlx": "0.32.3",
+            "mlx-lm": "0.32.0"
+          }
+        },
+        "limitations": [
+          "Frozen base and all adapters still need to fit unified memory.",
+          "MLX memory limit is an allocation guard, not a hard process RSS cap or fit guarantee.",
+          "Combined JSONL files are capped at 64 MiB; this prototype is not a streaming corpus loader.",
+          "Long rows are split without dropping targets; attention context resets at window boundaries.",
+          "Rotating windows give each layer fewer updates than the all-adapter baseline.",
+          "Training throughput excludes optimizer-state swap I/O, checkpoint I/O and validation.",
+          "RSS is a process high-water mark; compare strategies in fresh processes.",
+          "Tiny random-model results validate software, not useful model quality."
+        ]
+      },
+      "report_sha256": "30ddb0fc732d380586617ef1eceba09dd8b68b48e0e61369396fc068957f6954"
+    },
+    {
+      "cell": {
+        "seed": 11,
+        "strategy": "rotating"
+      },
+      "exit_code": 0,
+      "guard_stop": null,
+      "process_tree_rss_peak_bytes": 111181824,
+      "wall_seconds": 1.499436083016917,
+      "report": {
+        "mode": "random_tiny_software_check",
+        "strategy": "rotating",
+        "steps": 16,
+        "microbatches": 32,
+        "examples_consumed": 32,
+        "tokens": 939,
+        "training_seconds": 0.15976433432660997,
+        "tokens_per_second": 5877.40689408426,
+        "end_to_end_seconds_this_process_segment": 0.5238202498294413,
+        "tokens_per_second_including_io_and_validation_this_process_segment": 1792.5996566679953,
+        "heldout_nll_before": 6.062569891388093,
+        "heldout_nll_after": 6.023738228495995,
+        "heldout_nll_change": -0.03883166289209772,
+        "layer_update_coverage": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "layer_update_fraction": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "peak_optimizer_resident_bytes": 3596,
+        "mlx_peak_bytes_this_process_segment": 1161997,
+        "process_rss_high_water_bytes": 111247360,
+        "groups": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "history": [
+          {
+            "step": 1,
+            "group": 0,
+            "layers": [
+              0
+            ],
+            "loss": 6.147356033325195,
+            "tokens": 64,
+            "seconds": 0.011327791959047318,
+            "tokens_per_second": 5649.821274205541,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1161997,
+            "process_rss_high_water_bytes": 110526464
+          },
+          {
+            "step": 2,
+            "group": 1,
+            "layers": [
+              1
+            ],
+            "loss": 5.9336018562316895,
+            "tokens": 64,
+            "seconds": 0.009977417066693306,
+            "tokens_per_second": 6414.485790480316,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1161997,
+            "process_rss_high_water_bytes": 110903296
+          },
+          {
+            "step": 3,
+            "group": 2,
+            "layers": [
+              2
+            ],
+            "loss": 6.083689212799072,
+            "tokens": 64,
+            "seconds": 0.009483875008299947,
+            "tokens_per_second": 6748.296444648364,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1161997,
+            "process_rss_high_water_bytes": 110903296
+          },
+          {
+            "step": 4,
+            "group": 3,
+            "layers": [
+              3
+            ],
+            "loss": 6.233186483383179,
+            "tokens": 64,
+            "seconds": 0.009172541787847877,
+            "tokens_per_second": 6977.346244940478,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1161997,
+            "process_rss_high_water_bytes": 110903296
+          },
+          {
+            "step": 5,
+            "group": 0,
+            "layers": [
+              0
+            ],
+            "loss": 5.8612190408909575,
+            "tokens": 47,
+            "seconds": 0.010022082831710577,
+            "tokens_per_second": 4689.643938212991,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1161997,
+            "process_rss_high_water_bytes": 111132672
+          },
+          {
+            "step": 6,
+            "group": 1,
+            "layers": [
+              1
+            ],
+            "loss": 6.122157227759268,
+            "tokens": 51,
+            "seconds": 0.010108791990205646,
+            "tokens_per_second": 5045.113209314587,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1161997,
+            "process_rss_high_water_bytes": 111149056
+          },
+          {
+            "step": 7,
+            "group": 2,
+            "layers": [
+              2
+            ],
+            "loss": 5.997601509094238,
+            "tokens": 64,
+            "seconds": 0.009866041131317616,
+            "tokens_per_second": 6486.8977483629005,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1161997,
+            "process_rss_high_water_bytes": 111149056
+          },
+          {
+            "step": 8,
+            "group": 3,
+            "layers": [
+              3
+            ],
+            "loss": 6.12617826461792,
+            "tokens": 64,
+            "seconds": 0.009206082904711366,
+            "tokens_per_second": 6951.925228399468,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1161997,
+            "process_rss_high_water_bytes": 111149056
+          },
+          {
+            "step": 9,
+            "group": 0,
+            "layers": [
+              0
+            ],
+            "loss": 6.117649396260579,
+            "tokens": 48,
+            "seconds": 0.011732291895896196,
+            "tokens_per_second": 4091.2722276190366,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1161997,
+            "process_rss_high_water_bytes": 111149056
+          },
+          {
+            "step": 10,
+            "group": 1,
+            "layers": [
+              1
+            ],
+            "loss": 5.962097467160692,
+            "tokens": 51,
+            "seconds": 0.010069582844153047,
+            "tokens_per_second": 5064.757973525528,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1161997,
+            "process_rss_high_water_bytes": 111149056
+          },
+          {
+            "step": 11,
+            "group": 2,
+            "layers": [
+              2
+            ],
+            "loss": 6.009804010391235,
+            "tokens": 64,
+            "seconds": 0.009719541994854808,
+            "tokens_per_second": 6584.672408831549,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1161997,
+            "process_rss_high_water_bytes": 111165440
+          },
+          {
+            "step": 12,
+            "group": 3,
+            "layers": [
+              3
+            ],
+            "loss": 5.852450320595189,
+            "tokens": 38,
+            "seconds": 0.009158374974504113,
+            "tokens_per_second": 4149.207703963611,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1161997,
+            "process_rss_high_water_bytes": 111165440
+          },
+          {
+            "step": 13,
+            "group": 0,
+            "layers": [
+              0
+            ],
+            "loss": 6.060346364974976,
+            "tokens": 64,
+            "seconds": 0.011134250089526176,
+            "tokens_per_second": 5748.029681873578,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1161997,
+            "process_rss_high_water_bytes": 111165440
+          },
+          {
+            "step": 14,
+            "group": 1,
+            "layers": [
+              1
+            ],
+            "loss": 5.901017189025879,
+            "tokens": 64,
+            "seconds": 0.010208583902567625,
+            "tokens_per_second": 6269.233873260615,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1161997,
+            "process_rss_high_water_bytes": 111181824
+          },
+          {
+            "step": 15,
+            "group": 2,
+            "layers": [
+              2
+            ],
+            "loss": 5.902819871902466,
+            "tokens": 64,
+            "seconds": 0.009553167037665844,
+            "tokens_per_second": 6699.348995748045,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1161997,
+            "process_rss_high_water_bytes": 111181824
+          },
+          {
+            "step": 16,
+            "group": 3,
+            "layers": [
+              3
+            ],
+            "loss": 6.059293270111084,
+            "tokens": 64,
+            "seconds": 0.009023916907608509,
+            "tokens_per_second": 7092.263886654192,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1161997,
+            "process_rss_high_water_bytes": 111181824
+          }
+        ],
+        "mlx_memory_budget_bytes": 6442450944,
+        "train_token_windows": 168,
+        "valid_token_windows": 42,
+        "dataset_loading": "in_memory_causal_windows_with_one_token_overlap",
+        "identity": {
+          "config": {
+            "train_path": "/Users/a2/Documents/Codex/2026-10-07/new-chat/outputs/mac-local-training/examples/train.jsonl",
+            "valid_path": "/Users/a2/Documents/Codex/2026-10-07/new-chat/outputs/mac-local-training/examples/valid.jsonl",
+            "model_path": null,
+            "tiny_model": true,
+            "strategy": "rotating",
+            "microbatch_size": 1,
+            "accumulation_steps": 2,
+            "window_layers": 1,
+            "window_updates": 1,
+            "learning_rate": 0.001,
+            "rank": 4,
+            "lora_scale": 1.0,
+            "seed": 11,
+            "max_seq_length": 32,
+            "memory_budget_gib": 6
+          },
+          "train_sha256": "ce05ad9142a60dc53d57a4559aa05c71d99760adc0ec0662bf7eab36ec0dce15",
+          "valid_sha256": "8e101959a766623e92cd804c9827bfa9265aac55f43a1dac90b3b8e463c5fcad",
+          "model_files": {
+            "tiny_qwen2": "4_layers_32_hidden_64_intermediate_259_vocab_v1"
+          },
+          "versions": {
+            "mlx": "0.32.3",
+            "mlx-lm": "0.32.0"
+          }
+        },
+        "limitations": [
+          "Frozen base and all adapters still need to fit unified memory.",
+          "MLX memory limit is an allocation guard, not a hard process RSS cap or fit guarantee.",
+          "Combined JSONL files are capped at 64 MiB; this prototype is not a streaming corpus loader.",
+          "Long rows are split without dropping targets; attention context resets at window boundaries.",
+          "Rotating windows give each layer fewer updates than the all-adapter baseline.",
+          "Training throughput excludes optimizer-state swap I/O, checkpoint I/O and validation.",
+          "RSS is a process high-water mark; compare strategies in fresh processes.",
+          "Tiny random-model results validate software, not useful model quality."
+        ]
+      },
+      "report_sha256": "4764824dc158b2c0f289641521f24e442ede08518aa242efb2f7da00fc89bed2"
+    },
+    {
+      "cell": {
+        "seed": 47,
+        "strategy": "rotating"
+      },
+      "exit_code": 0,
+      "guard_stop": null,
+      "process_tree_rss_peak_bytes": 111722496,
+      "wall_seconds": 1.6939100828021765,
+      "report": {
+        "mode": "random_tiny_software_check",
+        "strategy": "rotating",
+        "steps": 16,
+        "microbatches": 32,
+        "examples_consumed": 32,
+        "tokens": 852,
+        "training_seconds": 0.16471370845101774,
+        "tokens_per_second": 5172.611363148115,
+        "end_to_end_seconds_this_process_segment": 0.5393340841401368,
+        "tokens_per_second_including_io_and_validation_this_process_segment": 1579.7258601935905,
+        "heldout_nll_before": 5.883633957036976,
+        "heldout_nll_after": 5.845398402892964,
+        "heldout_nll_change": -0.03823555414401181,
+        "layer_update_coverage": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "layer_update_fraction": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "peak_optimizer_resident_bytes": 3596,
+        "mlx_peak_bytes_this_process_segment": 1292548,
+        "process_rss_high_water_bytes": 111673344,
+        "groups": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "history": [
+          {
+            "step": 1,
+            "group": 0,
+            "layers": [
+              0
+            ],
+            "loss": 5.775492051068475,
+            "tokens": 51,
+            "seconds": 0.011597791919484735,
+            "tokens_per_second": 4397.388774868262,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 923941,
+            "process_rss_high_water_bytes": 110772224
+          },
+          {
+            "step": 2,
+            "group": 1,
+            "layers": [
+              1
+            ],
+            "loss": 6.028275347770529,
+            "tokens": 47,
+            "seconds": 0.010161708109080791,
+            "tokens_per_second": 4625.206657727106,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 992356,
+            "process_rss_high_water_bytes": 111132672
+          },
+          {
+            "step": 3,
+            "group": 2,
+            "layers": [
+              2
+            ],
+            "loss": 5.919334411621094,
+            "tokens": 64,
+            "seconds": 0.009606541832908988,
+            "tokens_per_second": 6662.126820783328,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 992356,
+            "process_rss_high_water_bytes": 111132672
+          },
+          {
+            "step": 4,
+            "group": 3,
+            "layers": [
+              3
+            ],
+            "loss": 5.975678139544548,
+            "tokens": 47,
+            "seconds": 0.009069500025361776,
+            "tokens_per_second": 5182.204076142026,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 992356,
+            "process_rss_high_water_bytes": 111132672
+          },
+          {
+            "step": 5,
+            "group": 0,
+            "layers": [
+              0
+            ],
+            "loss": 6.043087090386285,
+            "tokens": 45,
+            "seconds": 0.011233750032261014,
+            "tokens_per_second": 4005.7861240253055,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1244216,
+            "process_rss_high_water_bytes": 111394816
+          },
+          {
+            "step": 6,
+            "group": 1,
+            "layers": [
+              1
+            ],
+            "loss": 5.982162962568567,
+            "tokens": 47,
+            "seconds": 0.010358292143791914,
+            "tokens_per_second": 4537.427536079752,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1244216,
+            "process_rss_high_water_bytes": 111394816
+          },
+          {
+            "step": 7,
+            "group": 2,
+            "layers": [
+              2
+            ],
+            "loss": 6.033195972442627,
+            "tokens": 64,
+            "seconds": 0.00942529202438891,
+            "tokens_per_second": 6790.240539432989,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1244216,
+            "process_rss_high_water_bytes": 111394816
+          },
+          {
+            "step": 8,
+            "group": 3,
+            "layers": [
+              3
+            ],
+            "loss": 5.798298597335815,
+            "tokens": 64,
+            "seconds": 0.009443290997296572,
+            "tokens_per_second": 6777.298297629708,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1244216,
+            "process_rss_high_water_bytes": 111394816
+          },
+          {
+            "step": 9,
+            "group": 0,
+            "layers": [
+              0
+            ],
+            "loss": 5.96774435043335,
+            "tokens": 64,
+            "seconds": 0.013365916209295392,
+            "tokens_per_second": 4788.298759159577,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1292548,
+            "process_rss_high_water_bytes": 111607808
+          },
+          {
+            "step": 10,
+            "group": 1,
+            "layers": [
+              1
+            ],
+            "loss": 5.938074964158078,
+            "tokens": 47,
+            "seconds": 0.01012866711243987,
+            "tokens_per_second": 4640.294668414498,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1292548,
+            "process_rss_high_water_bytes": 111607808
+          },
+          {
+            "step": 11,
+            "group": 2,
+            "layers": [
+              2
+            ],
+            "loss": 5.995416598849826,
+            "tokens": 45,
+            "seconds": 0.010035332990810275,
+            "tokens_per_second": 4484.156135248144,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1292548,
+            "process_rss_high_water_bytes": 111624192
+          },
+          {
+            "step": 12,
+            "group": 3,
+            "layers": [
+              3
+            ],
+            "loss": 6.003492314764794,
+            "tokens": 47,
+            "seconds": 0.009297250071540475,
+            "tokens_per_second": 5055.25823639726,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1292548,
+            "process_rss_high_water_bytes": 111624192
+          },
+          {
+            "step": 13,
+            "group": 0,
+            "layers": [
+              0
+            ],
+            "loss": 6.059322611490885,
+            "tokens": 45,
+            "seconds": 0.010330915916711092,
+            "tokens_per_second": 4355.857734473365,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1292548,
+            "process_rss_high_water_bytes": 111624192
+          },
+          {
+            "step": 14,
+            "group": 1,
+            "layers": [
+              1
+            ],
+            "loss": 6.010382413864136,
+            "tokens": 64,
+            "seconds": 0.010345582850277424,
+            "tokens_per_second": 6186.215018159542,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1292548,
+            "process_rss_high_water_bytes": 111640576
+          },
+          {
+            "step": 15,
+            "group": 2,
+            "layers": [
+              2
+            ],
+            "loss": 5.793719677214927,
+            "tokens": 47,
+            "seconds": 0.010168292094022036,
+            "tokens_per_second": 4622.211829224636,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1292548,
+            "process_rss_high_water_bytes": 111640576
+          },
+          {
+            "step": 16,
+            "group": 3,
+            "layers": [
+              3
+            ],
+            "loss": 5.724931716918945,
+            "tokens": 64,
+            "seconds": 0.010145584121346474,
+            "tokens_per_second": 6308.163160891147,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1292548,
+            "process_rss_high_water_bytes": 111640576
+          }
+        ],
+        "mlx_memory_budget_bytes": 6442450944,
+        "train_token_windows": 168,
+        "valid_token_windows": 42,
+        "dataset_loading": "in_memory_causal_windows_with_one_token_overlap",
+        "identity": {
+          "config": {
+            "train_path": "/Users/a2/Documents/Codex/2026-10-07/new-chat/outputs/mac-local-training/examples/train.jsonl",
+            "valid_path": "/Users/a2/Documents/Codex/2026-10-07/new-chat/outputs/mac-local-training/examples/valid.jsonl",
+            "model_path": null,
+            "tiny_model": true,
+            "strategy": "rotating",
+            "microbatch_size": 1,
+            "accumulation_steps": 2,
+            "window_layers": 1,
+            "window_updates": 1,
+            "learning_rate": 0.001,
+            "rank": 4,
+            "lora_scale": 1.0,
+            "seed": 47,
+            "max_seq_length": 32,
+            "memory_budget_gib": 6
+          },
+          "train_sha256": "ce05ad9142a60dc53d57a4559aa05c71d99760adc0ec0662bf7eab36ec0dce15",
+          "valid_sha256": "8e101959a766623e92cd804c9827bfa9265aac55f43a1dac90b3b8e463c5fcad",
+          "model_files": {
+            "tiny_qwen2": "4_layers_32_hidden_64_intermediate_259_vocab_v1"
+          },
+          "versions": {
+            "mlx": "0.32.3",
+            "mlx-lm": "0.32.0"
+          }
+        },
+        "limitations": [
+          "Frozen base and all adapters still need to fit unified memory.",
+          "MLX memory limit is an allocation guard, not a hard process RSS cap or fit guarantee.",
+          "Combined JSONL files are capped at 64 MiB; this prototype is not a streaming corpus loader.",
+          "Long rows are split without dropping targets; attention context resets at window boundaries.",
+          "Rotating windows give each layer fewer updates than the all-adapter baseline.",
+          "Training throughput excludes optimizer-state swap I/O, checkpoint I/O and validation.",
+          "RSS is a process high-water mark; compare strategies in fresh processes.",
+          "Tiny random-model results validate software, not useful model quality."
+        ]
+      },
+      "report_sha256": "784b528db1b97a1cdece93b28b3d86d84fc28804bebe13801959935f76272d06"
+    },
+    {
+      "cell": {
+        "seed": 29,
+        "strategy": "all"
+      },
+      "exit_code": 0,
+      "guard_stop": null,
+      "process_tree_rss_peak_bytes": 111001600,
+      "wall_seconds": 1.2902886250521988,
+      "report": {
+        "mode": "random_tiny_software_check",
+        "strategy": "all",
+        "steps": 16,
+        "microbatches": 32,
+        "examples_consumed": 32,
+        "tokens": 897,
+        "training_seconds": 0.21279408386908472,
+        "tokens_per_second": 4215.342756201121,
+        "end_to_end_seconds_this_process_segment": 0.32660420797765255,
+        "tokens_per_second_including_io_and_validation_this_process_segment": 2746.44348752964,
+        "heldout_nll_before": 5.9415556877302365,
+        "heldout_nll_after": 5.427077173587665,
+        "heldout_nll_change": -0.5144785141425716,
+        "layer_update_coverage": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "layer_update_fraction": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "peak_optimizer_resident_bytes": 14348,
+        "mlx_peak_bytes_this_process_segment": 1306874,
+        "process_rss_high_water_bytes": 111460352,
+        "groups": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ],
+        "history": [
+          {
+            "step": 1,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 6.020794630050659,
+            "tokens": 64,
+            "seconds": 0.015006624860689044,
+            "tokens_per_second": 4264.783093742331,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1210678,
+            "process_rss_high_water_bytes": 110673920
+          },
+          {
+            "step": 2,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.569743394851685,
+            "tokens": 64,
+            "seconds": 0.013966541038826108,
+            "tokens_per_second": 4582.380119893967,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1297334,
+            "process_rss_high_water_bytes": 110804992
+          },
+          {
+            "step": 3,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 6.234988343481924,
+            "tokens": 51,
+            "seconds": 0.013547208858653903,
+            "tokens_per_second": 3764.6131045969223,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1299258,
+            "process_rss_high_water_bytes": 110870528
+          },
+          {
+            "step": 4,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.7012834548950195,
+            "tokens": 64,
+            "seconds": 0.013429749989882112,
+            "tokens_per_second": 4765.539198288665,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1306874,
+            "process_rss_high_water_bytes": 110870528
+          },
+          {
+            "step": 5,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 6.446159871419271,
+            "tokens": 30,
+            "seconds": 0.012730292044579983,
+            "tokens_per_second": 2356.5837998801235,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1306874,
+            "process_rss_high_water_bytes": 110952448
+          },
+          {
+            "step": 6,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 6.156737009684245,
+            "tokens": 48,
+            "seconds": 0.013310916954651475,
+            "tokens_per_second": 3606.062614884431,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1306874,
+            "process_rss_high_water_bytes": 110985216
+          },
+          {
+            "step": 7,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.870038032531738,
+            "tokens": 64,
+            "seconds": 0.013096458977088332,
+            "tokens_per_second": 4886.817124534588,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1306874,
+            "process_rss_high_water_bytes": 110985216
+          },
+          {
+            "step": 8,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.8262553215026855,
+            "tokens": 64,
+            "seconds": 0.013269874965772033,
+            "tokens_per_second": 4822.954260313674,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1306874,
+            "process_rss_high_water_bytes": 110985216
+          },
+          {
+            "step": 9,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 6.260618082682291,
+            "tokens": 30,
+            "seconds": 0.013022250030189753,
+            "tokens_per_second": 2303.749346729665,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1306874,
+            "process_rss_high_water_bytes": 110985216
+          },
+          {
+            "step": 10,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.5825183391571045,
+            "tokens": 64,
+            "seconds": 0.013128959108144045,
+            "tokens_per_second": 4874.720034758891,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1306874,
+            "process_rss_high_water_bytes": 111001600
+          },
+          {
+            "step": 11,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.8253603168562345,
+            "tokens": 51,
+            "seconds": 0.013157583074644208,
+            "tokens_per_second": 3876.0918103782583,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1306874,
+            "process_rss_high_water_bytes": 111001600
+          },
+          {
+            "step": 12,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.246279239654541,
+            "tokens": 64,
+            "seconds": 0.013078875141218305,
+            "tokens_per_second": 4893.387184216086,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1306874,
+            "process_rss_high_water_bytes": 111001600
+          },
+          {
+            "step": 13,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.459505796432495,
+            "tokens": 64,
+            "seconds": 0.012974957935512066,
+            "tokens_per_second": 4932.578611668092,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1306874,
+            "process_rss_high_water_bytes": 111001600
+          },
+          {
+            "step": 14,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.458514213562012,
+            "tokens": 64,
+            "seconds": 0.013158791000023484,
+            "tokens_per_second": 4863.668706333719,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1306874,
+            "process_rss_high_water_bytes": 111001600
+          },
+          {
+            "step": 15,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.342555046081543,
+            "tokens": 64,
+            "seconds": 0.012982624815776944,
+            "tokens_per_second": 4929.665680720045,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1306874,
+            "process_rss_high_water_bytes": 111001600
+          },
+          {
+            "step": 16,
+            "group": 0,
+            "layers": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "loss": 5.663527468417553,
+            "tokens": 47,
+            "seconds": 0.012932375073432922,
+            "tokens_per_second": 3634.2898913094828,
+            "optimizer_resident_bytes": 14348,
+            "trainable_parameters": 1792,
+            "mlx_peak_bytes": 1306874,
+            "process_rss_high_water_bytes": 111001600
+          }
+        ],
+        "mlx_memory_budget_bytes": 6442450944,
+        "train_token_windows": 168,
+        "valid_token_windows": 42,
+        "dataset_loading": "in_memory_causal_windows_with_one_token_overlap",
+        "identity": {
+          "config": {
+            "train_path": "/Users/a2/Documents/Codex/2026-10-07/new-chat/outputs/mac-local-training/examples/train.jsonl",
+            "valid_path": "/Users/a2/Documents/Codex/2026-10-07/new-chat/outputs/mac-local-training/examples/valid.jsonl",
+            "model_path": null,
+            "tiny_model": true,
+            "strategy": "all",
+            "microbatch_size": 1,
+            "accumulation_steps": 2,
+            "window_layers": 1,
+            "window_updates": 1,
+            "learning_rate": 0.001,
+            "rank": 4,
+            "lora_scale": 1.0,
+            "seed": 29,
+            "max_seq_length": 32,
+            "memory_budget_gib": 6
+          },
+          "train_sha256": "ce05ad9142a60dc53d57a4559aa05c71d99760adc0ec0662bf7eab36ec0dce15",
+          "valid_sha256": "8e101959a766623e92cd804c9827bfa9265aac55f43a1dac90b3b8e463c5fcad",
+          "model_files": {
+            "tiny_qwen2": "4_layers_32_hidden_64_intermediate_259_vocab_v1"
+          },
+          "versions": {
+            "mlx": "0.32.3",
+            "mlx-lm": "0.32.0"
+          }
+        },
+        "limitations": [
+          "Frozen base and all adapters still need to fit unified memory.",
+          "MLX memory limit is an allocation guard, not a hard process RSS cap or fit guarantee.",
+          "Combined JSONL files are capped at 64 MiB; this prototype is not a streaming corpus loader.",
+          "Long rows are split without dropping targets; attention context resets at window boundaries.",
+          "Rotating windows give each layer fewer updates than the all-adapter baseline.",
+          "Training throughput excludes optimizer-state swap I/O, checkpoint I/O and validation.",
+          "RSS is a process high-water mark; compare strategies in fresh processes.",
+          "Tiny random-model results validate software, not useful model quality."
+        ]
+      },
+      "report_sha256": "fae804221a21014246d297aae95f24812e058281bccdf0f37fe8d9353de1f237"
+    },
+    {
+      "cell": {
+        "seed": 29,
+        "strategy": "rotating"
+      },
+      "exit_code": 0,
+      "guard_stop": null,
+      "process_tree_rss_peak_bytes": 111083520,
+      "wall_seconds": 1.5020583749283105,
+      "report": {
+        "mode": "random_tiny_software_check",
+        "strategy": "rotating",
+        "steps": 16,
+        "microbatches": 32,
+        "examples_consumed": 32,
+        "tokens": 897,
+        "training_seconds": 0.17293974966742098,
+        "tokens_per_second": 5186.777485945327,
+        "end_to_end_seconds_this_process_segment": 0.5419590410310775,
+        "tokens_per_second_including_io_and_validation_this_process_segment": 1655.1066263115692,
+        "heldout_nll_before": 5.9415556877302365,
+        "heldout_nll_after": 5.8874865584637055,
+        "heldout_nll_change": -0.05406912926653096,
+        "layer_update_coverage": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "layer_update_fraction": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "peak_optimizer_resident_bytes": 3596,
+        "mlx_peak_bytes_this_process_segment": 1162125,
+        "process_rss_high_water_bytes": 111116288,
+        "groups": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "history": [
+          {
+            "step": 1,
+            "group": 0,
+            "layers": [
+              0
+            ],
+            "loss": 6.020794630050659,
+            "tokens": 64,
+            "seconds": 0.012456458993256092,
+            "tokens_per_second": 5137.896735713536,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1162125,
+            "process_rss_high_water_bytes": 110444544
+          },
+          {
+            "step": 2,
+            "group": 1,
+            "layers": [
+              1
+            ],
+            "loss": 5.571125030517578,
+            "tokens": 64,
+            "seconds": 0.010891083860769868,
+            "tokens_per_second": 5876.366468036357,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1162125,
+            "process_rss_high_water_bytes": 110804992
+          },
+          {
+            "step": 3,
+            "group": 2,
+            "layers": [
+              2
+            ],
+            "loss": 6.251691481646369,
+            "tokens": 51,
+            "seconds": 0.010239541996270418,
+            "tokens_per_second": 4980.691521024661,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1162125,
+            "process_rss_high_water_bytes": 110804992
+          },
+          {
+            "step": 4,
+            "group": 3,
+            "layers": [
+              3
+            ],
+            "loss": 5.749514579772949,
+            "tokens": 64,
+            "seconds": 0.0100358328782022,
+            "tokens_per_second": 6377.148840233062,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1162125,
+            "process_rss_high_water_bytes": 110804992
+          },
+          {
+            "step": 5,
+            "group": 0,
+            "layers": [
+              0
+            ],
+            "loss": 6.458554077148437,
+            "tokens": 30,
+            "seconds": 0.011549791088327765,
+            "tokens_per_second": 2597.4495790073674,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1162125,
+            "process_rss_high_water_bytes": 111017984
+          },
+          {
+            "step": 6,
+            "group": 1,
+            "layers": [
+              1
+            ],
+            "loss": 6.265520731608073,
+            "tokens": 48,
+            "seconds": 0.011014083167538047,
+            "tokens_per_second": 4358.056796000146,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1162125,
+            "process_rss_high_water_bytes": 111017984
+          },
+          {
+            "step": 7,
+            "group": 2,
+            "layers": [
+              2
+            ],
+            "loss": 6.02803897857666,
+            "tokens": 64,
+            "seconds": 0.012303709052503109,
+            "tokens_per_second": 5201.683470154849,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1162125,
+            "process_rss_high_water_bytes": 111017984
+          },
+          {
+            "step": 8,
+            "group": 3,
+            "layers": [
+              3
+            ],
+            "loss": 6.022265672683716,
+            "tokens": 64,
+            "seconds": 0.009316999930888414,
+            "tokens_per_second": 6869.1639449113245,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1162125,
+            "process_rss_high_water_bytes": 111017984
+          },
+          {
+            "step": 9,
+            "group": 0,
+            "layers": [
+              0
+            ],
+            "loss": 6.437351481119792,
+            "tokens": 30,
+            "seconds": 0.011131291976198554,
+            "tokens_per_second": 2695.1049405718036,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1162125,
+            "process_rss_high_water_bytes": 111050752
+          },
+          {
+            "step": 10,
+            "group": 1,
+            "layers": [
+              1
+            ],
+            "loss": 5.716022729873657,
+            "tokens": 64,
+            "seconds": 0.010984458029270172,
+            "tokens_per_second": 5826.41399598049,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1162125,
+            "process_rss_high_water_bytes": 111050752
+          },
+          {
+            "step": 11,
+            "group": 2,
+            "layers": [
+              2
+            ],
+            "loss": 5.959643494849112,
+            "tokens": 51,
+            "seconds": 0.010320791974663734,
+            "tokens_per_second": 4941.4812472917465,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1162125,
+            "process_rss_high_water_bytes": 111067136
+          },
+          {
+            "step": 12,
+            "group": 3,
+            "layers": [
+              3
+            ],
+            "loss": 5.339040517807007,
+            "tokens": 64,
+            "seconds": 0.0098577078897506,
+            "tokens_per_second": 6492.381465933173,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1162125,
+            "process_rss_high_water_bytes": 111067136
+          },
+          {
+            "step": 13,
+            "group": 0,
+            "layers": [
+              0
+            ],
+            "loss": 5.957445859909058,
+            "tokens": 64,
+            "seconds": 0.011825332883745432,
+            "tokens_per_second": 5412.109800982559,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1162125,
+            "process_rss_high_water_bytes": 111067136
+          },
+          {
+            "step": 14,
+            "group": 1,
+            "layers": [
+              1
+            ],
+            "loss": 5.848835468292236,
+            "tokens": 64,
+            "seconds": 0.010713374940678477,
+            "tokens_per_second": 5973.8411429057,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1162125,
+            "process_rss_high_water_bytes": 111083520
+          },
+          {
+            "step": 15,
+            "group": 2,
+            "layers": [
+              2
+            ],
+            "loss": 5.798749685287476,
+            "tokens": 64,
+            "seconds": 0.010348583105951548,
+            "tokens_per_second": 6184.421514013172,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1162125,
+            "process_rss_high_water_bytes": 111083520
+          },
+          {
+            "step": 16,
+            "group": 3,
+            "layers": [
+              3
+            ],
+            "loss": 6.03030622766373,
+            "tokens": 47,
+            "seconds": 0.009950707899406552,
+            "tokens_per_second": 4723.28204939098,
+            "optimizer_resident_bytes": 3596,
+            "trainable_parameters": 448,
+            "mlx_peak_bytes": 1162125,
+            "process_rss_high_water_bytes": 111083520
+          }
+        ],
+        "mlx_memory_budget_bytes": 6442450944,
+        "train_token_windows": 168,
+        "valid_token_windows": 42,
+        "dataset_loading": "in_memory_causal_windows_with_one_token_overlap",
+        "identity": {
+          "config": {
+            "train_path": "/Users/a2/Documents/Codex/2026-10-07/new-chat/outputs/mac-local-training/examples/train.jsonl",
+            "valid_path": "/Users/a2/Documents/Codex/2026-10-07/new-chat/outputs/mac-local-training/examples/valid.jsonl",
+            "model_path": null,
+            "tiny_model": true,
+            "strategy": "rotating",
+            "microbatch_size": 1,
+            "accumulation_steps": 2,
+            "window_layers": 1,
+            "window_updates": 1,
+            "learning_rate": 0.001,
+            "rank": 4,
+            "lora_scale": 1.0,
+            "seed": 29,
+            "max_seq_length": 32,
+            "memory_budget_gib": 6
+          },
+          "train_sha256": "ce05ad9142a60dc53d57a4559aa05c71d99760adc0ec0662bf7eab36ec0dce15",
+          "valid_sha256": "8e101959a766623e92cd804c9827bfa9265aac55f43a1dac90b3b8e463c5fcad",
+          "model_files": {
+            "tiny_qwen2": "4_layers_32_hidden_64_intermediate_259_vocab_v1"
+          },
+          "versions": {
+            "mlx": "0.32.3",
+            "mlx-lm": "0.32.0"
+          }
+        },
+        "limitations": [
+          "Frozen base and all adapters still need to fit unified memory.",
+          "MLX memory limit is an allocation guard, not a hard process RSS cap or fit guarantee.",
+          "Combined JSONL files are capped at 64 MiB; this prototype is not a streaming corpus loader.",
+          "Long rows are split without dropping targets; attention context resets at window boundaries.",
+          "Rotating windows give each layer fewer updates than the all-adapter baseline.",
+          "Training throughput excludes optimizer-state swap I/O, checkpoint I/O and validation.",
+          "RSS is a process high-water mark; compare strategies in fresh processes.",
+          "Tiny random-model results validate software, not useful model quality."
+        ]
+      },
+      "report_sha256": "f30439acb9e6de9b0f971a0b0ff3e254589c1ea27295757d5c2f5bfe7a13340a"
+    }
+  ],
+  "scope": "Three fixed seeds, random tiny models and synthetic token data. Matched data/steps, different layer update coverage. No useful model-quality, generalization or total-RAM savings claim."
+}

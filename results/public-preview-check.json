@@ -1,0 +1,10 @@
+{
+  "release_tag": "v0.2.0",
+  "tests_passed": 17,
+  "installed_cli": "mac-local-training",
+  "installed_smoke_passed": true,
+  "training_dependencies_optional": true,
+  "tested_python": "3.14.7",
+  "compute": "local Mac only",
+  "scope": "Local development checks, not production readiness, cloud CI or third-party adoption."
+}

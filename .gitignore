@@ -7,3 +7,9 @@ runs/
 models/
 *.safetensors
 *.npz
+
+*.egg-info/
+
+dist/
+
+build/

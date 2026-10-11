@@ -1,0 +1,8 @@
+{
+  "scope": "Post-run visualization of existing diagnostic measurements, not a pre-run protocol.",
+  "sha256": {
+    "plot_tiny_study.py": "66525823ba384717a99c90677d07a9571ce151cdf0b36ed88d32a97c6b3d6760",
+    "results/tiny-residency-20261011/study.json": "de733eb2697a63d752a6563dccd6cb611d403e4c5e0f23026b634c819346b0bc",
+    "results/tiny-residency-20261011/residency-and-nll.png": "2c3093af35a5335d3c364ac205af5e16dfc234063be5799dc8cbe1f40dba0453"
+  }
+}
