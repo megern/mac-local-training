@@ -135,6 +135,14 @@ def _rss_bytes() -> int:
     return int(value if sys.platform == "darwin" else value * 1024)
 
 
+class CompletionTokens(list):
+    """Token sequence whose target loss starts at a supplied token index."""
+
+    def __init__(self, tokens, loss_start):
+        super().__init__(tokens)
+        self.loss_start = loss_start
+
+
 def _read_data(path: str, tokenizer: Any, max_seq_length: int, vocab_size: int):
     rows: list[list[int]] = []
     with Path(path).open(encoding="utf-8") as handle:
@@ -152,6 +160,16 @@ def _read_data(path: str, tokenizer: Any, max_seq_length: int, vocab_size: int):
                 raise ValueError(f"{path}:{line_no}: tokens must be integer IDs")
             if len(tokens) < 2 or any(t < 0 or t >= vocab_size for t in tokens):
                 raise ValueError(f"{path}:{line_no}: invalid token IDs or fewer than two tokens")
+            if "loss_start" in row:
+                loss_start = row["loss_start"]
+                if type(loss_start) is not int or not 1 <= loss_start < len(tokens):
+                    raise ValueError(f"{path}:{line_no}: loss_start must select a nonempty target suffix")
+                # Preserve the complete prompt: silently chunking a completion can
+                # change the task and discard its conditioning context.
+                if len(tokens) > max_seq_length + 1:
+                    raise ValueError(f"{path}:{line_no}: completion sequence exceeds max_seq_length")
+                rows.append(CompletionTokens(tokens, loss_start))
+                continue
             # Overlap one input token: each original next-token target appears once.
             # Context resets at each boundary; this is not equivalent to full-context loss.
             for start in range(0, len(tokens) - 1, max_seq_length):
@@ -315,7 +333,9 @@ class TrainingEngine:
             length = len(row) - 1
             inputs.append(row[:-1] + [pad] * (width - length))
             targets.append(row[1:] + [pad] * (width - length))
-            masks.append([1.0] * length + [0.0] * (width - length))
+            loss_start = getattr(row, "loss_start", 1)
+            masks.append([float(index >= loss_start) for index in range(1, len(row))]
+                         + [0.0] * (width - length))
         return (self.mx.array(inputs, dtype=self.mx.int32),
                 self.mx.array(targets, dtype=self.mx.int32),
                 self.mx.array(masks, dtype=self.mx.float32))
@@ -492,12 +512,14 @@ class TrainingEngine:
                   "mlx_memory_budget_bytes": self.memory_budget_bytes,
                   "train_token_windows": len(self.train_data),
                   "valid_token_windows": len(self.valid_data),
-                  "dataset_loading": "in_memory_causal_windows_with_one_token_overlap",
+                  "dataset_loading": "in_memory; ordinary rows chunked, completion rows preserve full context",
+                  "loss_targets": {"train_completion_rows": sum(isinstance(r, CompletionTokens) for r in self.train_data),
+                                   "valid_completion_rows": sum(isinstance(r, CompletionTokens) for r in self.valid_data)},
                   "identity": self.identity,
                   "limitations": ["Frozen base and all adapters still need to fit unified memory.",
                                    "MLX memory limit is an allocation guard, not a hard process RSS cap or fit guarantee.",
                                    "Combined JSONL files are capped at 64 MiB; this prototype is not a streaming corpus loader.",
-                                   "Long rows are split without dropping targets; attention context resets at window boundaries.",
+                                   "Ordinary long rows are chunked with context resets; oversized completion rows are rejected.",
                                    "Rotating windows give each layer fewer updates than the all-adapter baseline.",
                                    "Training throughput excludes optimizer-state swap I/O, checkpoint I/O and validation.",
                                    "RSS is a process high-water mark; compare strategies in fresh processes.",

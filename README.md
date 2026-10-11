@@ -44,6 +44,28 @@ python3 -m mac_local_training train --model /absolute/local/qwen3-0.6b-4bit --tr
 
 ## How the experiment is divided
 
+### Completion-only targets (local development)
+
+JSONL token rows may provide `loss_start`, the zero-based index of the first
+token whose prediction contributes to the loss. For example,
+`{"tokens":[1,5,8,13,2],"loss_start":4}` trains only the final token while
+retaining all preceding tokens as context. Prompt and padding targets contribute
+zero loss; accumulated gradients are divided by the number of supervised targets.
+Rows without this field keep the original all-target behavior.
+
+Completion rows exceeding `max_seq_length + 1` tokens are rejected instead of
+silently chunking away prompt context. `loss_start` must be an integer between
+1 and `len(tokens)-1`. This supports classification and answer-only fine-tuning;
+it does not establish task quality. Development checks now include masked-loss
+agreement with manually selected cross-entropy terms.
+
+The workspace study scripts in `studies/` prepare fresh UCI SMS groups after
+excluding both prior experiments, then run an original-BF16 validation-only
+pilot. They depend on the sibling research checkout and existing local model
+files. Tokenized data and weights remain local. The reserved test is never
+loaded by the pilot runner. Pilot scores are exploratory and cannot establish
+algorithm novelty or superiority.
+
 1. Long token rows become causal windows with one shared boundary token. Every next-token target is retained, while attention context resets at the boundary.
 2. Microbatches contribute summed token gradients. An update uses the total token count, avoiding a mean-of-means error for unequal lengths.
 3. A rotating schedule activates `q_proj` and `v_proj` adapters for a small set of layers. Frozen base weights and every adapter weight remain resident.
@@ -53,6 +75,31 @@ python3 -m mac_local_training train --model /absolute/local/qwen3-0.6b-4bit --tr
 This is a local implementation and evaluation of block-coordinate adapter optimization. LoRA, quantization, gradient accumulation, and layer selection are established techniques. The project makes no priority claim for inventing them. Related work includes [LoRA](https://arxiv.org/abs/2106.09685), [QLoRA](https://arxiv.org/abs/2305.14314), and [LISA](https://arxiv.org/abs/2403.17919).
 
 ## What the memory budget means
+
+### Synchronous block Adam (experimental local development)
+
+`train-synchronous` uses the same local training arguments and a rotating window
+layout (`--strategy rotating`, the default, and `--window-updates 1`). It first
+recomputes gradients for every window on the same examples and pre-update weights,
+storing those gradients on disk, then applies all windows' Adam updates. Thus all
+layers receive an update for each logical step. It avoids the rotating schedule's
+unequal layer coverage by spending extra computation and I/O.
+
+```sh
+mac-local-training train-synchronous --tiny --train-data examples/train.jsonl --valid-data examples/valid.jsonl --output runs/synchronous --steps 8 --window-layers 1
+```
+
+Tiny-model tests compare adapter arrays, supervised target counts and validation
+loss with ordinary all-adapter Adam, and verify checkpoint/resume equivalence.
+Separate checkpoint identity prevents treating a rotating checkpoint as a
+synchronous one. Gradients are temporary local files; weights and moments remain
+in local checkpoints. If applying blocks fails partway, discard that engine and
+resume its last committed checkpoint.
+
+This is an experimental implementation of optimizer offload and recomputation,
+not a new-algorithm claim or a way to fit a base model larger than memory. Its
+training-time measurement includes block state/gradient I/O, unlike the original
+runner's training-only measurement. Compare end-to-end measurements instead.
 
 The default 6GiB MLX allocation guard leaves room on a 16GB Mac for the OS and other apps. It is not a hard process RSS limit or a promise that a run will fit. Local weight files exceeding the budget are rejected before loading. Train and validation JSONL files are capped at 64MiB combined because this first loader tokenizes them in memory.
 

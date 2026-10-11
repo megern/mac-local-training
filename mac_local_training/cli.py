@@ -16,7 +16,8 @@ def main():
     adapters = sub.add_parser("plan-adapters", help="Model raw FP32 adapter-state components without loading a model")
     adapters.add_argument("--trainable-parameters", type=int, required=True)
     adapters.add_argument("--active-fraction", type=float, default=1.0)
-    train = sub.add_parser("train", help="Train a local model or the tiny software-check model")
+    train = sub.add_parser("train", aliases=["train-synchronous"],
+                          help="Train locally; train-synchronous uses deferred block Adam with extra recomputation")
     choice = train.add_mutually_exclusive_group(required=True)
     choice.add_argument("--model", type=Path)
     choice.add_argument("--tiny", action="store_true")
@@ -55,7 +56,11 @@ def main():
                 learning_rate=args.learning_rate, rank=args.rank, max_seq_length=args.max_seq_length,
                 checkpoint_every=args.checkpoint_every, memory_budget_gib=args.memory_budget_gib,
                 resume=args.resume)
-            result = run_training(config)
+            if args.command == 'train-synchronous':
+                from .synchronous import SynchronousTrainingEngine
+                result = SynchronousTrainingEngine(config).run()
+            else:
+                result = run_training(config)
             result = {key: value for key, value in result.items() if key not in {"history", "identity"}}
     except (ValueError, OSError, ImportError, FloatingPointError) as exc:
         parser.exit(2, f"Local run error: {exc}\n")

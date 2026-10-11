@@ -54,6 +54,61 @@ class EngineTests(unittest.TestCase):
         self.assert_arrays_close(actual, full.adapter_arrays())
         self.assertAlmostEqual(accumulated.history[0]["loss"], full.history[0]["loss"], places=5)
 
+    def test_completion_loss_excludes_prompt_and_padding(self):
+        data = [{"tokens": [1, 5, 8, 13, 2], "loss_start": 4},
+                {"tokens": [1, 7, 2], "loss_start": 1}]
+        for name in ("train", "valid"):
+            (self.root / f"{name}.jsonl").write_text("".join(json.dumps(row) + "\n" for row in data))
+        engine = TrainingEngine(self.config("completion", strategy="all", steps=1))
+        inputs, targets, mask = engine._batch(engine.train_data)
+        self.assertEqual(mask.tolist(), [[0.0, 0.0, 0.0, 1.0], [1.0, 1.0, 0.0, 0.0]])
+        logits = engine.model(inputs).astype(mx.float32)
+        losses = engine.nn.losses.cross_entropy(logits, targets, reduction="none")
+        expected = losses[0, 3] + losses[1, 0] + losses[1, 1]
+        self.assertAlmostEqual(engine._loss_sum(engine.model, inputs, targets, mask).item(), expected.item(), places=5)
+        engine.update_once()
+        self.assertEqual(engine.history[0]["tokens"], 3)
+
+    def test_completion_rejects_missing_targets_and_context_truncation(self):
+        path = self.root / "masked.jsonl"
+        for start in (0, 3, True, "1"):
+            path.write_text(json.dumps({"tokens": [1, 5, 2], "loss_start": start}) + "\n")
+            with self.assertRaisesRegex(ValueError, "loss_start"):
+                _read_data(str(path), TinyTokenizer(), 16, TinyTokenizer.vocab_size)
+        path.write_text(json.dumps({"tokens": [1, 5, 8, 2], "loss_start": 3}) + "\n")
+        with self.assertRaisesRegex(ValueError, "exceeds"):
+            _read_data(str(path), TinyTokenizer(), 2, TinyTokenizer.vocab_size)
+
+    def test_masked_accumulation_matches_large_batch(self):
+        rows = [{"tokens": row, "loss_start": len(row) - 1 if i % 2 else 1}
+                for i, row in enumerate(self.rows)]
+        for name in ("train", "valid"):
+            (self.root / f"{name}.jsonl").write_text("".join(json.dumps(row) + "\n" for row in rows))
+        acc = TrainingEngine(self.config("masked-acc", strategy="all", steps=1,
+                                        accumulation_steps=2, microbatch_size=1))
+        acc.update_once()
+        expected = self.copy_arrays(acc.adapter_arrays())
+        full = TrainingEngine(self.config("masked-full", strategy="all", steps=1,
+                                         accumulation_steps=1, microbatch_size=2))
+        full.update_once()
+        self.assert_arrays_close(expected, full.adapter_arrays())
+
+    def test_masked_resume_preserves_target_objective(self):
+        for name in ("train", "valid"):
+            (self.root / f"{name}.jsonl").write_text("".join(
+                json.dumps({"tokens": row, "loss_start": len(row) - 1}) + "\n" for row in self.rows))
+        cfg = self.config("masked-continuous", steps=5, accumulation_steps=2)
+        continuous = TrainingEngine(cfg)
+        continuous.run()
+        expected = self.copy_arrays(continuous.adapter_arrays())
+        partial_cfg = replace(cfg, output_path=str(self.root / "masked-resumed"), steps=2)
+        TrainingEngine(partial_cfg).run()
+        resumed = TrainingEngine(replace(partial_cfg, steps=5, resume=True))
+        report = resumed.run()
+        self.assert_arrays_close(expected, resumed.adapter_arrays(), tolerance=1e-7)
+        self.assertEqual(report["tokens"], 10)
+        self.assertEqual(report["loss_targets"]["train_completion_rows"], 4)
+
     def test_rotating_freezes_base_and_moves_only_active_group(self):
         engine = TrainingEngine(self.config("groups", steps=4, accumulation_steps=1))
         base = self.copy_arrays(engine.base_arrays())
