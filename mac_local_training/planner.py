@@ -12,3 +12,17 @@ def estimate(parameters_billions: float, bits: int, budget_gib: float) -> dict:
         "notes": ["Raw weights only: quantization metadata and unquantized tensors are excluded.",
             "Training also needs adapters, gradients, optimizer state, activations and OS/app headroom.",
             "Adapter rotation does not remove the base model's resident-weight requirement."]}
+
+
+def estimate_adapter_state(trainable_parameters: int, active_fraction: float = 1.0) -> dict:
+    """Raw FP32 adapter/gradient/Adam components, not measured process memory."""
+    if isinstance(trainable_parameters, bool) or not isinstance(trainable_parameters, int) or trainable_parameters <= 0:
+        raise ValueError("trainable_parameters must be a positive integer")
+    if isinstance(active_fraction, bool) or not math.isfinite(active_fraction) or not 0 < active_fraction <= 1:
+        raise ValueError("active_fraction must be finite in (0, 1]")
+    active = math.ceil(trainable_parameters * active_fraction)
+    components = {"resident_adapter_bytes": trainable_parameters * 4,
+                  "active_gradient_bytes": active * 4, "active_adam_moments_bytes": active * 8}
+    return {"trainable_parameters": trainable_parameters, "active_parameters": active,
+            "components": components, "modeled_total_bytes": sum(components.values()),
+            "scope": "FP32 components assuming inactive gradients and Adam moments are released. Excludes frozen base weights, activations, runtime overhead and OS headroom; no fit or measured savings guarantee."}

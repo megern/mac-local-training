@@ -56,3 +56,12 @@ The included corpus contains synthetic Arabic/English templates. It is a softwar
 مختبر تدريب محلي على الماك يوزّع تحديث محوّلات LoRA بين مجموعات طبقات، ويحفظ حالة المحسّن للمجموعات غير النشطة على القرص. شغّلنا تجربة صغيرة فعلية على Qwen3 بحجم 0.6B: انخفضت ذاكرة حالة المحسّن مع التدوير، لكن ذاكرة العملية زادت وكان التحسن في فقد التحقق أقل. التجارب قصيرة وعلى بيانات اصطناعية؛ لا تثبت جودة نموذج للأمن السيبراني أو إمكانية تدريب نموذج يتجاوز ذاكرة الجهاز. التدريب والتحقق محليان بالكامل.
 
 Primary implementation references: [MLX-LM LoRA](https://github.com/ml-explore/mlx-lm/blob/main/mlx_lm/LORA.md) and [MLX memory management](https://ml-explore.github.io/mlx/build/html/python/memory_management.html).
+
+## Adapter-state planning before a run
+
+```sh
+python3 -m mac_local_training.cli plan-adapters --trainable-parameters 655360 --active-fraction 0.25
+python3 -m unittest discover -s tests
+```
+
+The planner separately reports resident FP32 adapter parameters, active gradients and two active Adam moments. For 655,360 parameters, the full state components total 10,485,760 bytes; a quarter-active model totals 4,587,520 bytes while all adapter parameters remain resident. This assumes inactive gradients and optimizer moments are released. These are raw component calculations, not measured RAM savings. Frozen base weights, activations, runtime overhead and OS headroom are excluded. Rotation does not make a 70B original model fit in 16 GiB.
