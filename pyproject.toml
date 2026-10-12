@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mac-local-training"
-version = "0.2.0"
+version = "1.0.0"
 description = "Local MLX adapter-window experiments with disk-backed optimizer state"
 requires-python = ">=3.10"
 license = "MIT"
@@ -19,6 +19,7 @@ Repository = "https://github.com/megern/mac-local-training"
 Issues = "https://github.com/megern/mac-local-training/issues"
 
 [project.scripts]
+mac-training-review = "mac_local_training.study_catalog:main"
 mac-local-training = "mac_local_training.cli:main"
 
 [tool.setuptools.packages.find]

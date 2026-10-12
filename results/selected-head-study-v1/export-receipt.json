@@ -1,0 +1,24 @@
+{
+  "status": "local review artifact; not published",
+  "runs": 36,
+  "no_datasets_or_weights_exported": true,
+  "original_protocol_sha256": "d314210a7b68c5a3d33cba32a552343a6ec3cff1bf7208c8aab7761bab26118b",
+  "note": "Local complete records/checkpoints remain private. Hashes and aggregate exports provide provenance, not independent authentication of the measurements.",
+  "exported_files_sha256": {
+    "analysis.json": "6d0b1dbbdfb928bfe262f9a20a7ddb34ee125787ae793ab5688db8d6de4980df",
+    "data-manifest.json": "6dbfff74961ae81a4fa35117927ab318c0446113c3e6e0f5070d40c4027b3c4d",
+    "executed-source/mac_local_training/endpoint.py": "2f51f6e305a91c88cdc8d7813a07958d0bf7587620d583d2b8de8f44523464c6",
+    "executed-source/mac_local_training/engine.py": "2ec452eb4e6f8981bbf660f346599bd5244ef687284d4a0a908b9e67bc690381",
+    "executed-source/mac_local_training/offloaded.py": "87e6db0338843331b8aed41188c9cb9df7b76e9885feeaaf886fe17d7a99c646",
+    "executed-source/mac_local_training/rootrelease.py": "4da07ae9bc4adba3911cd1f239b380fa498c69f3e7ff89bede5e5804cac03665",
+    "executed-source/mac_local_training/selected_head.py": "fbb2d98c5991e873be9770dcfafd2a5761ce974c898703b1ad59c09ee1a782b4",
+    "executed-source/mac_local_training/synchronous.py": "79728b10c06352a2e7a7d50baa35c4d62320660383f6a902650091004078231e",
+    "executed-source/studies/analyze_selected_head_study.py": "75088db04bae3e4b4488ac0f6c5809575cfdfff1784da863c403f6fa420e0144",
+    "executed-source/studies/endpoint_study.py": "69d13471c82f15203e0d0316d3e1af6948350f2bd91c0d52c2c754bc68c2fbdd",
+    "executed-source/studies/selected_head_study.py": "be08de0d11d1f64b87feae632c93222210140ebae7f5a1e6f1637f1377a25328",
+    "executed-source/studies/supervise_optimizer_study.py": "3329d33901b74f99825af0362d748b01cb96f7c305a34804db60985de95bb55d",
+    "execution-audit.json": "ee70082bed4d3fb90e51a3a0a182d6a160a5f9c37bdec0eb325f8927efb53700",
+    "protocol-design.json": "0312e107019494634198596add945dc0bdea3210ada3c388c8fd3af1d9c62cfa",
+    "run-measurements.json": "bf3739e001327d7d2d8451750501a9d55832ab3889fcc537f1230a8642183051"
+  }
+}

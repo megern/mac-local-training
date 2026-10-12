@@ -7,7 +7,7 @@ from pathlib import Path
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--analysis', type=Path, required=True)
-    parser.add_argument('--kind', choices=['endpoint', 'normalization', 'recomputation'], required=True)
+    parser.add_argument('--kind', choices=['endpoint', 'normalization', 'recomputation', 'selected', 'tiled'], required=True)
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
     import matplotlib
@@ -15,7 +15,7 @@ def main():
     import matplotlib.pyplot as plt
     data = json.loads(args.analysis.read_text())
     normalization = args.kind != 'endpoint'
-    candidate = 'recomputed' if args.kind == 'recomputation' else 'normalized'
+    candidate = {'normalization':'normalized','recomputation':'recomputed','selected':'selected','tiled':'selected'}.get(args.kind,'normalized')
     elapsed_key = f'elapsed_{candidate}_over_endpoint' if normalization else 'elapsed_endpoint_over_fixed'
     memory_key = f'peak_{candidate}_over_endpoint' if normalization else 'peak_endpoint_over_fixed'
     fig, axes = plt.subplots(2, 2, figsize=(10, 6.6), layout='constrained')
@@ -44,9 +44,9 @@ def main():
             if column == 1 and normalization:
                 axis.axhline(.97, color='#c37b30', ls=':', lw=1, label='3% reduction gate')
                 axis.legend(fontsize=8, loc='lower left')
-    ratio_label = {'normalization': 'group-local normalization / endpoint baseline', 'recomputation': 'deferred recomputation / endpoint baseline', 'endpoint': 'endpoint retention / fixed-order offload'}[args.kind]
+    ratio_label = {'normalization': 'group-local normalization / endpoint baseline', 'recomputation': 'deferred recomputation / endpoint baseline', 'endpoint': 'endpoint retention / fixed-order offload', 'selected':'one-row projection / dense endpoint', 'tiled':'tile-16 projection / root-released dense endpoint'}[args.kind]
     fig.suptitle(f"Original Qwen3 0.6B BF16 on M1 16 GiB\n{ratio_label}; lower ratios are better", fontsize=12)
-    fig.supxlabel('Six paired blocks per rank; shared machine; four measured updates after two warmups. No task-quality or 70B fit claim.', fontsize=8)
+    fig.supxlabel('Six paired blocks/rank, shared machine. Numerical gate: '+('passed' if data['all_numerical_equivalence_gates_passed'] else 'FAILED')+'. Allocation alone is not acceptance.', fontsize=8)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(args.output, dpi=180)
     plt.close(fig)

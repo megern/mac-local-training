@@ -1,0 +1,11 @@
+{
+  "scope": "Shared-machine context, not a protocol change",
+  "concurrent_project_activity": [
+    "Documentation and source editing",
+    "CPU-only installation and report checks",
+    "Earlier-study plotting and data reconstruction"
+  ],
+  "other_project_mlx_jobs_during_confirmation": false,
+  "thermal_state_logged": false,
+  "user_apps_closed": false
+}

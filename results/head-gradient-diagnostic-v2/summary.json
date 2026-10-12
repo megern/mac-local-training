@@ -1,0 +1,52 @@
+{
+  "status": "post-hoc exploratory gradient diagnostic; no confirmation decision",
+  "reference_loss": 1.4355950355529785,
+  "seed": 17,
+  "rank": 4,
+  "context_tokens": 256,
+  "supervised_positions": 1,
+  "records": [
+    {
+      "tile": 1,
+      "loss": 1.4355950355529785,
+      "loss_difference": 0.0,
+      "max_gradient_error": 0.03426027297973633,
+      "largest_error_key": "model.layers.2.self_attn.v_proj.lora_b"
+    },
+    {
+      "tile": 16,
+      "loss": 1.4355950355529785,
+      "loss_difference": 0.0,
+      "max_gradient_error": 0.0,
+      "largest_error_key": "model.layers.0.self_attn.q_proj.lora_a"
+    },
+    {
+      "tile": 32,
+      "loss": 1.4355950355529785,
+      "loss_difference": 0.0,
+      "max_gradient_error": 0.0,
+      "largest_error_key": "model.layers.0.self_attn.q_proj.lora_a"
+    },
+    {
+      "tile": 64,
+      "loss": 1.4355950355529785,
+      "loss_difference": 0.0,
+      "max_gradient_error": 0.0,
+      "largest_error_key": "model.layers.0.self_attn.q_proj.lora_a"
+    },
+    {
+      "tile": 128,
+      "loss": 1.4355950355529785,
+      "loss_difference": 0.0,
+      "max_gradient_error": 0.0,
+      "largest_error_key": "model.layers.0.self_attn.q_proj.lora_a"
+    },
+    {
+      "tile": 256,
+      "loss": 1.4355950355529785,
+      "loss_difference": 0.0,
+      "max_gradient_error": 0.0,
+      "largest_error_key": "model.layers.0.self_attn.q_proj.lora_a"
+    }
+  ]
+}

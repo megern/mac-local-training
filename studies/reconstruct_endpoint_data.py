@@ -40,7 +40,14 @@ def reconstruct(manifest_path, source_path, model_path, output):
                 raise ValueError('Label boundary changed')
             if len(tokens) + 1 > 97:
                 raise ValueError('Context exceeded; no truncation permitted')
-            records.append({'id': row_id, 'label': label, 'tokens': tokens + [target], 'loss_start': len(tokens)})
+            sequence=tokens+[target];start=len(tokens)
+            padding=manifest.get('context_padding')
+            if padding:
+                if set(padding)!={'insert_after_token','token_id','target_length'} or padding['insert_after_token']!=1 or type(padding['token_id']) is not int or not 0<=padding['token_id']<len(tokenizer) or type(padding['target_length']) is not int or not len(sequence)<=padding['target_length']<=4097:
+                    raise ValueError('Invalid synthetic context-padding declaration')
+                extra=padding['target_length']-len(sequence)
+                sequence=sequence[:1]+[padding['token_id']]*extra+sequence[1:];start+=extra
+            records.append({'id': row_id, 'label': label, 'tokens': sequence, 'loss_start': start})
         payload = ''.join(json.dumps(row) + '\n' for row in records).encode()
         if hashlib.sha256(payload).hexdigest() != manifest['splits'][split]['tokenized_sha256']:
             raise ValueError(f'{split} reconstruction differs from original experiment')

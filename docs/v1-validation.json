@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "date": "2026-10-12",
+  "local_tests": 45,
+  "test_exit_code": 0,
+  "installed_workflow_checks": "See v1 workflow guide; tested outside source checkout. Outcomes requiring review were retained, not counted as clean detections.",
+  "compute": "Local Mac only; no hosted CI",
+  "scope": "Functional validation on supplied fixtures/public research inputs, not production effectiveness or adoption.",
+  "all_nine_project_tests": 299,
+  "installed_workflows_verified_outside_checkouts": 11,
+  "installed_training_software_check": {
+    "mode": "random_tiny_software_check",
+    "steps": 3,
+    "strategy": "supervised_position_head_tile16_grouped_adam",
+    "checkpoint_created": true,
+    "note": "Random tiny-model software check, not model quality evidence"
+  }
+}

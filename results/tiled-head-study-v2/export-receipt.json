@@ -1,0 +1,28 @@
+{
+  "status": "local review artifact; not published",
+  "runs": 36,
+  "no_datasets_or_weights_exported": true,
+  "original_protocol_sha256": "159be0b2975bd6d5a4a9d17898fbee81a3d56414c663f9655e87c9c60ea7acdb",
+  "note": "Local complete records/checkpoints remain private. Hashes and aggregate exports provide provenance, not independent authentication of the measurements.",
+  "exported_files_sha256": {
+    "analysis.json": "f9206b81065f9655efe4b1a579084188560b7a4b110207e5866e5267703c70b8",
+    "comparison.png": "f314d9e7b2a9544f47b8b026b019cdc7a5a140907e3268917823317e99233a04",
+    "data-manifest.json": "8c70dfcbe54adf1b5763b8356dc7dbfa2609171aa41a4636be1e0948f3de0854",
+    "executed-source/mac_local_training/endpoint.py": "2f51f6e305a91c88cdc8d7813a07958d0bf7587620d583d2b8de8f44523464c6",
+    "executed-source/mac_local_training/engine.py": "2ec452eb4e6f8981bbf660f346599bd5244ef687284d4a0a908b9e67bc690381",
+    "executed-source/mac_local_training/offloaded.py": "87e6db0338843331b8aed41188c9cb9df7b76e9885feeaaf886fe17d7a99c646",
+    "executed-source/mac_local_training/rootrelease.py": "4da07ae9bc4adba3911cd1f239b380fa498c69f3e7ff89bede5e5804cac03665",
+    "executed-source/mac_local_training/selected_head.py": "fbb2d98c5991e873be9770dcfafd2a5761ce974c898703b1ad59c09ee1a782b4",
+    "executed-source/mac_local_training/synchronous.py": "79728b10c06352a2e7a7d50baa35c4d62320660383f6a902650091004078231e",
+    "executed-source/mac_local_training/tiled_head.py": "dc4092dcf7f6b2cf2193fe1b4fc5e8df9a8a04bf4ef565439784520b6378026b",
+    "executed-source/studies/analyze_tiled_head_study.py": "8b3d36079b0b054570301b5475490f0ee788278c6b3b2543c64878ef00048726",
+    "executed-source/studies/endpoint_study.py": "69d13471c82f15203e0d0316d3e1af6948350f2bd91c0d52c2c754bc68c2fbdd",
+    "executed-source/studies/supervise_optimizer_study.py": "3329d33901b74f99825af0362d748b01cb96f7c305a34804db60985de95bb55d",
+    "executed-source/studies/tiled_head_study.py": "90d6e3e6896058cdb57cf1dc29534d2245a73bcfc42ae723b5d53668549a6301",
+    "execution-audit.json": "5beb4c9d87ad31e39753e209742dea5e6163883fc9be323390e25414ca6db7ee",
+    "execution-context.json": "74c0c7fdf4a74981b58a917b4296233ecc2e20fe49444b7b3f4cda32f4ea30d8",
+    "host-environment.json": "4ee558b1a3e2e21e0699dac933f533f1aeecaf103d69b21bbaac933e0631ef87",
+    "protocol-design.json": "669827f53a4e534ab5f94251e88cc58361e1c7f111981e51ff357462767be0bb",
+    "run-measurements.json": "269b06109f22a02af2ba8dc184e202665432cc625d5ad1708d9e406a0206aebe"
+  }
+}

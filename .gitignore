@@ -13,3 +13,9 @@ models/
 dist/
 
 build/
+
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+reviews/
+.review-pending-*

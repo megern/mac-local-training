@@ -1,5 +1,11 @@
 # Mac Local Training
 
+## Version 1.0.0
+
+Training and independent evidence review. Adds an experimental tile-16 supervised-position projection path with dense/high-density fallback, on verified Qwen2/Qwen3 interfaces. All original model weights stay resident. A previous one-row projection failed numerical-equivalence gates and is retained as negative evidence. Local research comparison determines the bounded tile-16 claim; it is not a novel optimizer, base-weight compression or general quality guarantee. Help and evidence review work without MLX; training uses optional local [train] dependencies.
+
+See the [complete local workflow](docs/v1-workflow.md) for installation, commands, review artifacts and limits. Earlier preview notes below describe their historical tagged revisions.
+
 ## Public preview v0.2.0
 
 Python 3.11+; commands below use a local Mac/Linux shell. Source and reports are public; this is a research/development preview, not a production-security certification.
@@ -222,3 +228,22 @@ were zero in these tested configurations. Rank 4 saves only 0.81% and fails the
 algorithm, physical-RAM percentage or quality improvement is established.
 See [complete third-study evidence](results/recomputation-study-v1/analysis.json)
 and [execution accounting](results/recomputation-study-v1/execution-audit.json).
+
+
+### v1.0 supervision-aware projection confirmation
+
+The project now retains **180 completed research runs** across five studies.
+The new tile-16 method passed all numerical gates in its independent 36-run
+256-token synthetic-context study: rank-256 MLX allocator peak was **14.75%**
+lower and measured-update duration **17.67%** shorter than the dense comparator
+with the same redundant-root cleanup. Every final adapter tensor, Adam state
+and NLL difference was zero in these six-step configurations. Rank-4 peak and
+duration reductions were 17.39% and 18.25%. The earlier one-row method failed
+numerical gates and remains visible. These are local workload measurements,
+not physical-RAM percentages, new optimizer priority, quality improvement or
+original 70B feasibility.
+
+Read the [projection research note](papers/supervised-projection-study.md) and
+[exact reconstruction/replication guide](docs/supervised-projection-reproduction.md).
+`train-selected-head` uses the tile-16 implementation with unchanged dense loss
+for short or densely supervised batches. No model/data downloads occur.

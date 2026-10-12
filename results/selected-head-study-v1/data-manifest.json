@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "uci_member_sha256": "7d039a24a6083ed9ef0f806ebad56bbb976e3aeb8de05669173bfdc4996c239d",
+  "uci_source": "https://archive.ics.uci.edu/dataset/228/sms+spam+collection",
+  "attribution": "Almeida and Hidalgo, 2011, UCI SMS Spam Collection, DOI 10.24432/C5CC84, CC BY 4.0.",
+  "model_source": "https://huggingface.co/Qwen/Qwen3-0.6B",
+  "model_weight_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+  "tokenizer_files_sha256": {
+    "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+  },
+  "splits": {
+    "train": {
+      "ids": [
+        "uci-04380",
+        "uci-03226",
+        "uci-01771",
+        "uci-03653",
+        "uci-03806",
+        "uci-03297",
+        "uci-05384",
+        "uci-04096",
+        "uci-01242",
+        "uci-00582",
+        "uci-02634",
+        "uci-04953",
+        "uci-03214",
+        "uci-05183",
+        "uci-00937",
+        "uci-00669"
+      ],
+      "tokenized_sha256": "e411e568ba0c789cfab08d92d64d29bb27d4ed4aa3f06033cdb9bf9474bf3e2c"
+    },
+    "valid": {
+      "ids": [
+        "uci-00369",
+        "uci-01531",
+        "uci-04731",
+        "uci-04634",
+        "uci-03027",
+        "uci-04316",
+        "uci-01739",
+        "uci-02295"
+      ],
+      "tokenized_sha256": "3eb1ea42064f51fee4980bce1a97132544e924d5337ef039087d86bc2d95d60c"
+    }
+  },
+  "purpose": "Synthetic 256-token conditioning stress using public SMS labels. Repeated token 1000 is inserted after the first token; no task-quality or neutral-padding claim.",
+  "context_padding": {
+    "insert_after_token": 1,
+    "token_id": 1000,
+    "target_length": 257
+  }
+}
